@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Open+Sans:wght@600&family=Smooch+Sans:wght@600&display=swap');
+
+.mechanic-container {
+    width:75rem;
+    height: 45rem;
+
+    background-image: url('https://cdn.fairplay-rp.ro/recovery/mecanic.png');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    transform: perspective(300px) rotateY(3deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.mechanic-container .mechanic-info {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.mechanic-container .mechanic-info .mechanic-info-boxes {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.mechanic-container .mechanic-info .mechanic-info-boxes .mechanic-box {
+    min-height: 3rem;
+    min-width: 7rem;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.mechanic-container .mechanic-description {
+    margin-top: 3rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 15px;
+    max-width: 30rem;
+}
+
+.mechanic-container .mechanic-description .title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.mechanic-container .mechanic-description .description {
+    color: white;
+    opacity: .9;
+    font-size: 1.2rem;
+}
+
+.mechanic-container .button {
+    margin-top: 4rem;
+    margin-left: 11.5rem;
+
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+    border: 0;
+}
+
+.mechanic-container .button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.938);
+}
+
+.mechaniccall-alert-layout{
+    position: absolute;
+    bottom: 4.5%;
+    left: 35%;
+    font-family: "Akrobat";
+    display: none;
+    animation: animmechaniccall 1s;
+}
+
+.mechaniccall-alert-layout > .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.mechaniccall-alert-layout > .wrapper > img{
+    align-self: flex-start;
+    margin-top: .5vh;
+    width: 35px;
+    height: 55px;
+    border-radius: .25vw;
+    filter: drop-shadow(-3px -3px 2px #d7a85a50)
+          drop-shadow(5px 5px 5px #d7a85a35);
+}
+
+.mechaniccall-alert-layout > .wrapper > .texts{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.mechaniccall-alert-layout > .wrapper > .texts > .line{
+    background: #ffffff60;
+    width: 9vw;
+    height: .3vh;
+    border-radius: 10vw;
+}
+
+.mechaniccall-alert-layout > .wrapper > .texts > h1{
+    font-size: 1.5em;
+    font-family: "Akrobat Bold";
+    letter-spacing: 1.5px;
+}
+
+.mechaniccall-alert-layout > .wrapper > .texts > .paragraphs > p{
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+@keyframes animmechaniccall{
+    from {
+        bottom: -10%;
+    } to {
+        bottom: 4.5%;   
+    }
+}

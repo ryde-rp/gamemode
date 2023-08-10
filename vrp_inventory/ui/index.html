@@ -1,0 +1,182 @@
+i<head>
+    <!-- Preload Style -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" >
+    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" as="style" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+    <link rel="preload" as="style" href="https://fonts.cdnfonts.com/css/akrobat" >
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/akrobat">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/aef25c3e23.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="inventory">
+        <div class="bg"></div>
+        <div class="secondbg"></div>
+        <div class="thirdbg"></div>
+        
+        <div class="iteminfo-container">
+            <div class="wrapper">
+                <div class="item-data">
+                    <header>
+                        <h1 id="iteminfo-name">ITEM NECUNOSCUT</h1>
+                        <p>KG &nbsp; <span id="iteminfo-weight">120</span></p>
+                    </header>
+                    <hr>
+                </div>
+                <p id="iteminfo-desc">Acest item nu are o descriere definita.</p>
+                <div class="item-options">
+                    <div class="option" id="item-use">
+                        <i class="fas fa-computer-mouse"></i>
+                        <p>FOLOSEȘTE</p>
+                    </div>
+                    <div class="option" id="item-drop">
+                        <i class="fas fa-trash"></i>
+                        <p>ARUNCĂ</p>
+                    </div>
+                    <div class="option" id="item-give">
+                        <i class="fas fa-hands-holding"></i>
+                        <p>OFERĂ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-inventory="player" class="player-inventory">        
+            <div class="ply-inventory-data">
+                <h1>INVENTARUL TAU</h1>
+                <div class="weight">
+                    <span>
+                        <i class="fas fa-weight-hanging"></i>
+                        <p id="player-kg">&nbsp;120/120</p>
+                    </span>
+
+                    <div class="progress-handler">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-inventory-weight">
+                <div class="progress"></div>
+            </div>
+            <div class="player-items"></div>
+        </div>
+
+        <div class="util-buttons">
+            <div class="util-button" id="ofera-bani">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <p>Ofera Banii</p>
+            </div>
+            <div class="util-button" id="perchezitioneaza" style="display: none;">
+                <i class="fa-solid fa-gun"></i>
+                <p>Perchezitioneaza</p>
+            </div>
+            <div class="util-button" id="cere-portbagaj">
+                <i class="fa-solid fa-car"></i>
+                <p>Cere Portbagaj</p>
+            </div>
+            <div class="util-button" id="cere-torpedou" style="display:none;">
+                <i class="fa-solid fa-car"></i>
+                <p>Cere Torpedou</p>
+            </div>
+        </div>
+
+        <div data-inventory="other" class="other-inventory">
+            <div style="display: none;" id="car-inventory">
+                <div class="car-image">
+                    <img src="https://cdn.discordapp.com/attachments/793974028145524767/1034996382144135178/MASINITA222.png" alt="">
+                </div>
+                <div id='closeChest' class="other-inv-kg"></div>
+                <div style="position: fixed;top:23vh;" class="other-inventory-head">OTHER</div>
+                <div class="other-items"></div>
+            </div>
+
+            <div style="display: none;" id="chest-inventory">
+                <div class="ply-chest-data">
+                    <h1 id="chest-name">CUFAR</h1>
+                    <div class="weight">
+                        <span>
+                            <i class="fas fa-weight-hanging"></i>
+                            <p id="chest-kg">120/120</p>
+                        </span>
+    
+                        <div class="progress-handler-chest">
+                            <div class="chest-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: fixed;top:25vh;" class="other-inventory-head"></div>
+                <div class="other-items" style="position: absolute; "></div>
+            </div>
+        </div>
+
+
+        <div class="cloth-inv">
+            <div class="cloth-items">
+                <div class="cloth-inv-head"></div>
+                <div id="masca" class="item-box">
+                    <img src="cloth/mask.svg">
+                    <!-- <span>MASCA</span> -->
+                </div>
+                <div id="ochelari" class="item-box">
+                    <img src="cloth/glasses.svg">
+                    <!-- <span>OCHELARI</span> -->
+                </div>
+                <div id="jacheta" class="item-box">
+                    <img src="cloth/shirt.svg">
+                    <!-- <span>TRICOU</span> -->
+                </div>
+               
+                <div id="vesta" class="item-box">
+                    <img src="cloth/vest.svg">
+                    <!-- <span>VESTA</span> -->
+                </div>
+                <div id="pantaloni" class="item-box">
+                    <img src="cloth/pants.svg">
+                    <!-- <span>PANTALONI</span> -->
+                </div>
+                <div id="papuci" class="item-box">
+                    <img src="cloth/shoes.svg">
+                    <!-- <span>ADIDASI</span> -->
+                </div>
+                <div id="palarie" class="item-box">
+                    <img src="cloth/hat.svg">
+                    <!-- <span>PALARIE</span> -->
+                </div>
+            </div>
+            <!-- <img src="https://cdn.discordapp.com/attachments/1011738615266693313/1078461789026648184/strokeeE_2.png" class="skel"> -->
+        </div>
+
+        <div class="quick-hotbar" data-inventory="quick">
+            <!-- <div class="player-quick-head">UTILITATI</div> -->
+        </div>
+        
+        <div class="prompt-wrapper" style="display: none;">
+            <div class="inventory-prompt">
+                <div class="prompt-header">
+                    <div class="title" id="prompt-title">CAT OFERI?</div>
+                    <div class="description" id="prompt-description">CANTITATE ITEM 25X</div>
+                </div>
+    
+                <input type="number" id="prompt-input" placeholder="INTRODU O CANTITATE">
+                <div class="prompt-info">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <p>Numarul introdus trebuie sa fie unul mai mare de 0. Cifrele negative nu sunt luate in considerare</p>
+                </div>
+                <div class="button" id="prompt-button">
+                    <i class="fa-solid fa-check"></i>
+                    <p>CONFIRM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='app.js'></script>
+</body>

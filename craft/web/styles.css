@@ -1,0 +1,212 @@
+@import "https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap";
+
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css";
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: none;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.crafting-body {
+    display: none;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.image {
+    height: 120px;
+    position: absolute;
+    top: 22.5%;
+}
+
+.image_itemselected {
+    height: 80px;
+}
+
+.image_components {
+    height: 60px;
+}
+
+.table-responsive {
+    height: 564px;
+    overflow-x: hidden;
+    padding: 3px 10px 5px;
+}
+
+.components-responsive {
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: .25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #407ddb;
+    transition: .25s;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 17.5%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 60px;
+    line-height: 1;
+    text-transform: uppercase;
+    display: none;
+}
+
+.itemslist {
+    position: absolute;
+    left: 50%;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.itemrequirements {
+    position: absolute;
+    left: 82%;
+    top: 51%;
+    transform: translate(-50%, -50%);
+    display: none;
+    box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.3);
+    border-radius: 20px;
+}
+
+#craft-button-div {
+    position: absolute;
+}
+
+.item-card {
+    width: 170px;
+    height: 170px;
+}
+
+.item-card:hover {
+    cursor: pointer;
+}
+
+.item-card-body {
+    width: 170px;
+    height: 170px;
+    box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.3);
+    transition: .25s;
+}
+
+.item-card-body:hover {
+    background: #407ddb !important;
+    transition: .25s;
+    transform: scale(1.035);
+}
+
+.card-body {
+    background-color: #fff;
+    color: rgba(110, 113, 121, 1);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.item-title {
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    top: 8%;
+}
+
+#craft-button {
+    display: none;
+    box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.3);
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 13px 17px;
+    border: none;
+    -webkit-border-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 2px;
+    -moz-background-clip: padding;
+    border-radius: 2px;
+    background-clip: padding-box;
+    transition: color .2s linear, background-color .2s linear;
+    letter-spacing: .2px;
+}
+
+.btn.btn-blue {
+    background-color: #407ddb;
+    color: #e6e6e6;
+}
+
+.btn.btn-blue.btn-border {
+    border-color: #407ddb;
+    color: #407ddb;
+}
+
+.btn.btn-blue.btn-3d {
+    box-shadow: inset 0 -2px 0 #0a4df9;
+}
+
+.btn.btn-blue:hover {
+    background-color: #4d41a7e8;
+    color: #e6e6e6;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+hr {
+    opacity: 1;
+    color: #fff;
+}
+
+.timer {
+    position: fixed;
+    right: 1.5%;
+    bottom: 5%;
+    font-size: 50px;
+    display: none;
+}
+
+.timer-card-body {
+    background-color: #751fff;
+    font-weight: 600 !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.3);
+}
+
+#time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: #407ddb;
+    box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.3);
+    border-radius: 10px;
+    padding: 5px;
+}

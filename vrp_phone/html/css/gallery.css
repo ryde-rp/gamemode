@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.gallery-app {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(140deg, #6883ba 40%, #e6ebf1);
+	overflow: hidden;
+
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5vh;
+}
+
+.gallery-app-header {
+	position: absolute;
+	height: 7vh;
+	width: 100%;
+	background-color: #6883ba;
+	text-align: center;
+	line-height: 13.5vh;
+	z-index: 1;
+}
+
+.gallery-app-header > span {
+	position: absolute;
+	top: -.5vh;
+	padding: .5vh;
+	z-index: 2;
+}
+
+.gallery-app-header > span i {
+	transition: color .2s;
+}
+
+.gallery-app-header > span i:hover {
+	color: #c5c5c5;
+}
+
+.gallery-homescreen {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	right: 0vh;
+}
+
+.gallery-detailscreen {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	right: -30vh;
+}
+
+.gallery-detailscreen #gallery-date {
+	position: absolute;
+	top: 37.7vh;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2vh;
+}
+
+.gallery-images::-webkit-scrollbar {
+	display: none;
+}
+
+.gallery-images {
+	width: 86%;
+	height: 49vh;
+	margin: 12vh auto 0 auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	grid-auto-rows: 8vh;
+	grid-gap: .2vh;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.tumbnail {
+	object-fit: cover;
+	height: 8vh;
+	width: 8vh;
+	border-radius: .3vh;
+}
+
+.gallery-details {
+	position: absolute;
+	width: 95%;
+	margin: 0 auto;
+	left: 0vh;
+	right: 0;
+	top: 20vh;
+	box-shadow: 0 0 3px 0 black;
+}

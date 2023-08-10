@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.hud-wrapper {
+    position: absolute;
+    right: 0px;
+    top: 5.5%;
+    width: 100%;
+    height: 20%;
+    padding: 1vh;
+}
+
+.hud-wrapper > .hud-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 2vw;
+}
+
+.survival-wrapper {
+    position: absolute;
+    bottom: 1.5vh;
+    left: 4vh;
+    transition: all 1s ease 0s;
+}
+
+.survivalcontainer-wrapper {
+    margin-top: 18px;
+}
+
+.survivalcontainer {
+    display: flex;
+    gap: 15px;
+}
+
+.circle-progress-value1 {
+    stroke-width: 12px;
+    stroke: #FFFFFF;
+}
+
+.circle-progress-value2 {
+    stroke-width: 12px;
+    stroke: #FF8181;
+}
+
+.circle-progress-value3 {
+    stroke-width: 12px;
+    stroke: #647DFF;
+}
+
+.circle-progress-value4 {
+    stroke-width: 12px;
+    stroke: #FFB864;
+}
+
+.circle-progress-value5 {
+    stroke-width: 12px;
+    stroke: rgb(136, 208, 249);
+}
+
+.circle-progress-value6 {
+    stroke-width: 12px;
+    stroke: rgb(113, 197, 172);
+}
+
+.circle-progress-value7 {
+    stroke-width: 12px;
+    stroke: rgb(250, 204, 79);
+}
+
+.circle-progress-value8 {
+    stroke-width: 12px;
+    stroke: rgb(35, 73, 145);
+}
+
+.survival-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fairplay-hud-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.separator {
+    position:
+    relative;
+    right: 0;
+    top:9px;
+    width: 1px;
+    height: 6.111vh;
+    background: rgba(255,255,255,0.25);
+    display: inline-block;
+}
+
+.fairplay-hud-wrapper .fairplay-hud {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-logo {
+    width: 11.38vh;
+    height: 11.38vh;
+    margin-right: 2.4vh;
+    position: relative;
+    display: block;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    /* margin-left: -2.40vh; */
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data {
+    top: 3.6407vh;
+    /* top: 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    right: 23px;
+    position: relative;
+    height: 11.38vh;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .text {
+    display: inline-flex;
+    font-size: 1.4814vh;
+    margin-left: auto;
+    letter-spacing: 0.5vh;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts:nth-child(1) {
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts:nth-child(2) {
+    margin-top: -5px;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text {
+    font-size: 1.4814vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text > p {
+/*     background: rgba(147, 147, 147, 0.4); */
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4814vh;
+    /* identical to box height */
+    color: #FFFFFF;
+    text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+}
+
+#fp_watermark {
+    font-weight: 800;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text > i {
+    color:rgb(255,255,255);
+    text-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text > i.clock {
+    width: 21px;
+    height: 21px;
+    background:url("https://cdn.fairplay-rp.ro/recovery/clockicon.png");
+    background-size: fit;
+    background-repeat:no-repeat;
+    background-position: top;
+}
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text > i.players {
+    width: 22px;
+    height: 22px;
+    background:url("https://cdn.fairplay-rp.ro/recovery/playersicon.png");
+    background-size: fit;
+    background-repeat:no-repeat;
+    background-position: top;
+}
+
+
+.fairplay-hud-wrapper .fairplay-hud .fairplay-hud-data .fairplay-hud-texts .fairplay-text b {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.4814vh;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.fairplay-hud-boxes {
+    position: absolute;
+    right: 1px;
+    top: 13%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fairplay-hud-boxes .fairplay-hud-box {
+    padding: 0.0vh 0.0vh;
+    display: flex;
+    justify-content: right;
+/*     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.19)); */
+/*     border-right: 3px solid rgb(0, 254, 236); */
+}
+
+.fairplay-hud-boxes .fairplay-hud-box:nth-child(2){
+    color: rgba(206, 206, 206, 1) !important;
+}
+
+.fairplay-hud-boxes .fairplay-hud-box:nth-child(1)::after {
+    display:inline-block;
+    margin-left: 10px;
+    content: "";
+    border-right: 3px solid rgba(0, 255, 238, 1);
+    box-shadow: 35px 0px 40px 20px rgba(0, 255, 238, 1);
+}
+
+.fairplay-hud-boxes .fairplay-hud-box:nth-child(2)::after {
+    display:inline-block;
+    margin-left: 10px;
+    content: "";
+    border-right: 3px solid rgba(206, 206, 206, 1);
+    box-shadow: 35px 0px 40px 20px rgba(206, 206, 206, 1);
+}
+
+/* rgba(206, 206, 206, 1) */
+
+.fairplay-hud-boxes .fairplay-hud-box .text {
+    font-family: Akrobat;
+    font-size: 2.3vh;
+    font-weight: 600;
+}
+
+.fairplay-hud-boxes .fairplay-hud-box i {
+    display:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4vh;
+    width: 3.1vh;
+    height: 3vh;
+    border-radius: 0.3vw;
+}
+
+.progress1, .progress2, .progress3, .progress4, .progress5, .progress6, .progress7, .progress8 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 4.16vh !important;
+    height: 4.16vh !important;
+    background:rgba(0, 0, 0, 0.3);
+}
+
+.circle-progress1, .circle-progress2, .circle-progress3, .circle-progress4, .circle-progress5, .circle-progress6, .circle-progress7, .circle-progress8 {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.circle-progress-circle1, .circle-progress-circle2, .circle-progress-circle3, .circle-progress-circle4, .circle-progress-circle5, .circle-progress-circle6, .circle-progress-circle7, .circle-progress-circle8 {
+    stroke-width: 7px;
+    stroke: rgba(255, 255, 255, 0.494);
+}
+
+.zone, .street, .vreme {
+    color: rgb(255, 255, 255);
+    text-align: left;
+}

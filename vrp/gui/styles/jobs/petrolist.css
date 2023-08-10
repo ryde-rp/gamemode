@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Open+Sans:wght@600&family=Smooch+Sans:wght@600&display=swap');
+
+.petrolist-container {
+    width:75rem;
+    height: 45rem;
+
+    background-image: url('https://cdn.fairplay-rp.ro/jobProfile/petrolistjob.webp');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    transform: perspective(300px) rotateY(3deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.petrolist-container .petrolist-info {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.petrolist-container .petrolist-info .petrolist-info-boxes {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.petrolist-container .petrolist-info .petrolist-info-boxes .petrolist-box {
+    min-height: 3rem;
+    min-width: 7rem;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.petrolist-container .petrolist-description {
+    margin-top: 3rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 15px;
+    max-width: 30rem;
+}
+
+.petrolist-container .petrolist-description .title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.petrolist-container .petrolist-description .description {
+    color: white;
+    opacity: .9;
+    font-size: 1.2rem;
+}
+
+.petrolist-container .skills-bar {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    max-width: 60%;
+}
+
+.petrolist-container .skills-bar .progressbar {
+    counter-reset: step;
+}
+
+.petrolist-container .skills-bar .progressbar li {
+    list-style-type: none;
+    float: left;
+    min-width: 33%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.petrolist-container .skills-bar .progressbar li:before {
+    font-family: FontAwesome; 
+    content: '\f023';
+    color:rgb(11, 76, 0);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid rgb(11, 76, 0);
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.petrolist-container .skills-bar .progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(221, 221, 221, 0.795);
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.petrolist-container .skills-bar .progressbar li:first-child:after {
+    content: none;
+}
+
+.petrolist-container .skills-bar .progressbar li.active:before {
+    font-family: FontAwesome; 
+    color:rgb(11, 76, 0);
+    border: 2px solid rgb(11, 76, 0);
+    content: '\f00c';
+}
+
+.petrolist-container .skills-bar .progressbar li.unlocked:before {
+    font-family: FontAwesome; 
+    color:rgb(11, 76, 0);
+    border: 2px solid rgb(11, 76, 0);
+    content: '\f09c';
+}
+
+.petrolist-container .skills-bar .progressbar li:hover {
+    cursor: pointer;
+}
+
+.petrolist-container .skills-bar .progressbar li.active + li:after {
+    background-color: rgb(11, 76, 0);
+}
+
+.petrolist-container .button {
+    margin-top: 3rem;
+    margin-left: 7rem;
+
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.petrolist-container .button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.938);
+}
+
+
+
+.fairplay-petrolistjob {
+    display: none;
+}
+
+.fairplay-petrolistjob *{
+    box-sizing: unset !important;
+}
+
+.fairplay-petrolistjob-left-card {
+    position: absolute;
+    top: 22vh;
+    background: url('https://imgur.com/BBPa7A8.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 8%;
+    height: 45%;
+    left: 6vw;
+    display: flex;
+    flex-direction: column;
+    padding: 7.5vh 5vw;
+    gap: 8%;
+
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    animation: leftcard 1s linear;
+}
+
+.fairplay-petrolistjob-left-card > .fairplay-petrolistjob-leftcard-title {
+    position: relative;
+    text-align: center;
+    bottom: 1vh;
+    font-size: .5em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    opacity: .6;
+    bottom: 12.5vh;
+}
+
+.fairplay-petrolistjob-centercard-card > .fairplay-petrolistjob-leftcard-title.centerFarm {
+    position: relative;
+    text-align: center;
+    font-size: .5em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    opacity: .6;
+    bottom: 12vh;
+}
+
+.fairplay-petrolistjob-right-card > .fairplay-petrolistjob-leftcard-title.right {
+    position: relative;
+    text-align: center;
+    font-size: .5em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    opacity: .6;
+    bottom: 13vh;
+}
+
+.fairplay-petrolistjob-centercard-card > .fairplay-petrolistjob-leftcard-title {
+    position: relative;
+    text-align: center;
+    bottom: 1vh;
+    font-size: .5em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    opacity: .6;
+    bottom: 22.5vh;
+}
+
+.fairplay-petrolistjob-right-card > .fairplay-petrolistjob-leftcard-title {
+    position: relative;
+    text-align: center;
+    bottom: 1vh;
+    font-size: .5em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    opacity: .6;
+    bottom: 21vh;
+}
+
+.fairplay-petrolistjob-right-card {
+    position: absolute;
+    top: 20vh;
+    background: url('https://imgur.com/yuATVGp.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 10%;
+    height: 44%;
+    right: 5vw;
+    display: flex;
+    flex-direction: column;
+    padding: 7.5vh 5vw;
+    gap: 8%;
+
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fairplay-petrolistjob-centercard-card {
+    position: absolute;
+    top: 20vh;
+    background: url('https://imgur.com/olmWoD3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 10%;
+    height: 45%;
+    right: 39.3vw;
+    display: flex;
+    flex-direction: column;
+    padding: 7.5vh 5vw;
+    gap: 8%;
+
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* left card */
+.fairplay-petrolistjob-left-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title {
+    color: #fff;
+    font-family: 'Akrobat';
+    letter-spacing: .08em;
+    font-size: 1.1em;
+}
+
+.fairplay-petrolistjob-left-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object > span {
+    background-color: #ffffff60;
+    box-shadow: 0 0 0 4px #ffffff30;
+    border-radius: 10vw;
+    padding: .4vh 1vh;
+}
+
+.fairplay-petrolistjob-left-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object {
+    background-color: #ffffff40;
+    box-shadow: 0 0 0 4px #ffffff30;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: .11em;
+    padding: 1.1vh 1.7vh;
+    transition: .5s all;
+    scale: 1.1;
+    margin-top: 2vh
+}
+
+.fairplay-petrolistjob-left-card > 
+.fariplay-petrolistjob-cards-texts > 
+.fairplay-petrolistjob-cards-texts-title > 
+.fariplay-petrolistjob-object:hover {
+    background-color: #ffffff90;
+    box-shadow: 0 0 0 5px #ffffff40;
+    scale: .96;
+    cursor: pointer;
+}
+
+/* center card */
+.fairplay-petrolistjob-centercard-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title {
+    color: #fff;
+    font-family: 'Akrobat';
+    letter-spacing: .08em;
+    font-size: 1.4em;
+}
+
+.fairplay-petrolistjob-centercard-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object > span {
+    background-color: #ffffff60;
+    box-shadow: 0 0 0 4px #ffffff30;
+    border-radius: 10vw;
+    padding: .4vh 1vh;
+}
+
+.fairplay-petrolistjob-centercard-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object {
+    background-color: #ffffff40;
+    box-shadow: 0 0 0 4px #ffffff30;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: .11em;
+    padding: 1.1vh 1.7vh;
+    transition: .5s all;
+    scale: 1;
+    margin-top: 2vh
+}
+
+.fairplay-petrolistjob-centercard-card > 
+.fariplay-petrolistjob-cards-texts > 
+.fairplay-petrolistjob-cards-texts-title > 
+.fariplay-petrolistjob-object:hover {
+    background-color: #ffffff90;
+    box-shadow: 0 0 0 5px #ffffff40;
+    scale: .90;
+    cursor: pointer;
+}
+
+
+/* right card */
+.fairplay-petrolistjob-right-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title {
+    color: #fff;
+    font-family: 'Akrobat';
+    letter-spacing: .08em;
+    font-size: 1.1em;
+    margin-left: 1.5vw;
+}
+
+.fairplay-petrolistjob-right-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object > span {
+    background-color: #ffffff60;
+    box-shadow: 0 0 0 4px #ffffff30;
+    border-radius: 10vw;
+    padding: .6vh 1vh;
+}
+
+.fairplay-petrolistjob-right-card > .fariplay-petrolistjob-cards-texts > .fairplay-petrolistjob-cards-texts-title > .fariplay-petrolistjob-object {
+    background-color: #ffffff40;
+    box-shadow: 0 0 0 4px #ffffff30;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: .11em;
+    padding: 1.1vh 1.7vh;
+    transition: .5s all;
+    scale: 1.1;
+    margin-top: 2vh
+}
+
+.fairplay-petrolistjob-right-card > 
+.fariplay-petrolistjob-cards-texts > 
+.fairplay-petrolistjob-cards-texts-title > 
+.fariplay-petrolistjob-object:hover {
+    background-color: #ffffff90;
+    box-shadow: 0 0 0 5px #ffffff40;
+    scale: .96;
+    cursor: pointer;
+}
+
+.fairplay-petrolistjob-backgrounds > .fairplay-petrolistjob-backgrounds-mainbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://imgur.com/HI2gaJb.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fairplay-petrolistjob-backgrounds-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://imgur.com/RfpNgvP.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fairplay-petrolistjob-left-card:hover {opacity: .9;}
+.fairplay-petrolistjob-centercard-card:hover {opacity: .9;}
+.fairplay-petrolistjob-right-card:hover {opacity: .9;}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

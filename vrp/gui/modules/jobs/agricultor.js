@@ -1,0 +1,102 @@
+const agricultor = new Vue({
+    el: ".agricultor-container",
+    data: {
+        active: false,
+        userSkill: 1,
+        selectedSkill: 1,
+        jobActive: false,
+    },
+    methods: {
+        async post(url, data = {}) {
+            const response = await fetch(`https://${GetParentResourceName()}/${url}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            
+            return await response.json();
+        },
+        onKey() {
+            var theKey = event.code;
+            if (theKey == 'Escape' && this.active)
+                this.destroy();
+        },
+        build(data) {
+            this.active = true;
+            this.userSkill = data.skill;
+            this.selectedSkill = data.skill;
+            this.jobActive = data.jobActive;
+            this.UpdateSkills(data.skill);
+            $(".agricultor-container").fadeIn();
+            $(".jobs-container").fadeIn();
+        },
+        destroy() {
+            if (!this.active) return;
+            this.active = false;
+            $(".agricultor-container").fadeOut();
+            $(".jobs-container").fadeOut();
+            this.post('jobExit', {exit: true})
+        },
+        startagricultor: function() {
+            this.post('startJob', {job: 'Agricultor', skill: this.selectedSkill});
+            this.destroy();
+        },
+        StopJob() {
+            this.post('quitJob', {job: 'Agricultor'});
+            this.destroy();
+        },
+        UpdateSkills: function(skill) {
+            this.userSkill = skill;
+            if (skill == 1) {
+                this.SelectSkil(1);
+            } else if (skill == 2) {
+                $(".skill-1").addClass("unlocked");
+               this.SelectSkil(2);
+            } else if (skill == 3) {
+                $(".skill-1").addClass("unlocked");
+                $(".skill-2").addClass("unlocked");
+                this.SelectSkil(3);
+            }
+        },
+        SelectSkil(skil) {
+            this.selectedSkill = skil;
+            if (this.userSkill < skil) return;
+            if (skil == 1) {
+                $(".skill-1").addClass("active");
+                $(".skill-2").removeClass("active");
+                $(".skill-3").removeClass("active");
+                $(".skill-1").removeClass("unlocked");
+
+                if (this.userSkill == 2) {
+                    $(".skill-2").addClass("unlocked");
+                } else if (this.userSkill == 3) {
+                    $(".skill-2").addClass("unlocked");
+                    $(".skill-3").addClass("unlocked");
+                }
+            } else if (skil == 2) {
+                $(".skill-1").removeClass("active");
+                $(".skill-2").addClass("active");
+                $(".skill-3").removeClass("active");
+                $(".skill-1").addClass("unlocked");
+                $(".skill-2").removeClass("unlocked");
+
+                if (this.userSkill == 3) {
+                    $(".skill-1").addClass("unlocked");
+                    $(".skill-3").addClass("unlocked");
+                }
+            } else if (skil == 3) {
+                $(".skill-1").removeClass("active");
+                $(".skill-2").removeClass("active");
+                $(".skill-3").addClass("active");
+
+                $(".skill-1").addClass("unlocked");
+                $(".skill-2").addClass("unlocked");
+                $(".skill-3").removeClass("unlocked");
+
+            }
+        },
+    },
+    mounted() {
+        window.addEventListener('keydown', this.onKey)
+    },
+})

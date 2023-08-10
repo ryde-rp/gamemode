@@ -1,0 +1,390 @@
+.markets-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.fairplay-rp.ro/recovery/poza_smechera_magazin_2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Akrobat";
+    display: none;
+}
+
+.markets-layout > .cover-bg{
+    position: absolute;
+    top: 0;
+    left: 22%;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://cdn.fairplay-rp.ro/recovery/unknown (15).png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+}
+
+.markets-layout > img.cotoroanta{
+    position: absolute;
+    bottom: 0;
+    right: -14.25%;
+    width: 38%;
+}
+
+.markets-layout > img.tigari{
+    position: absolute;
+    top: -17%;
+    left: 37.5%;
+    width: 17%;
+    transform: rotate(160deg);
+    z-index: 1;
+}
+
+.markets-layout > img.zaruri{
+    position: absolute;
+    top: 11%;
+    right: 37.5%;
+    width: 4.5%;
+}
+
+.markets-layout > .account-name{
+
+    position: absolute;
+    top: 0;
+    left: 7%;
+    
+    width: 25%;
+    height: 15%;
+
+    display: flex;
+    gap: 2.5vw;
+    align-items: center;
+    
+}
+
+.markets-layout > .account-name > img{
+    width: 29%;
+}
+
+.markets-layout > .account-name > .texts-layout{
+    display: flex;
+    align-items: center;
+    gap: 1.25vw;
+}
+
+.markets-layout > .account-name > .texts-layout > i{
+    font-size: 1.9em;
+}
+
+.markets-layout > .account-name > .texts-layout > .texts{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.markets-layout > .account-name > .texts-layout > .texts > p{
+    font-size: 1.5em;
+    text-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+
+.markets-layout > .account-name > .texts-layout > .texts > h1{
+    font-size: 1.75em;
+    letter-spacing: 1.75px;
+}
+
+.markets-layout > .your-balance{
+    position: absolute;
+    top: 5.5%;
+    right: 15%;
+
+    padding: 1vh;
+    
+    display: flex;
+    gap: 1.2vw;
+    align-items: center;
+}
+
+.markets-layout > .your-balance > strong{
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .35);
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+.markets-layout > .your-balance > .texts{
+    display: flex;
+    flex-direction: column;
+    gap: .25vh;
+    font-family: "Akrobat Bold";
+}
+
+.markets-layout > .your-balance > .texts > p{
+    opacity: .5;
+    letter-spacing: 1px;
+}
+
+.markets-layout > .middle-items{
+    display: flex;
+    gap: 1vw;
+    
+    width: 85%;
+    height: 70%;
+    
+    left: 49.5%;
+    top: 55%;
+}
+
+.markets-layout > .middle-items > .products-layout{
+    height: 100%;
+    padding-right: 5vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-transform: uppercase;
+}
+
+.markets-layout > .middle-items > .products-layout::-webkit-scrollbar {
+    width: 4px;
+}
+
+.markets-layout > .middle-items > .products-layout::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.markets-layout > .middle-items > .products-layout::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff000;
+}
+
+.markets-layout > .middle-items > .products-layout::-webkit-scrollbar-thumb:window-inactive {
+    background: #fff000;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.65vh 2vw;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .img-box{
+    width: 8vw;
+    height: 13.5vh;
+    border: 2.5px solid #ffffff20;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s;
+}
+
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .img-box:not(:hover) > p{
+    display: none;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .img-box > p{
+    margin-top: auto;
+    padding: 1vh 1.5vw;
+    background: #fade2e;
+    border-radius: 10vw;
+    color: #2b3239;
+    font-size: .9em;
+    letter-spacing: .5px;
+    font-family: "Akrobat Bold";
+    animation: market-buy-btn 1s;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .img-box > .reducere{
+    position: absolute;
+    height: auto;
+    width: 4.62962962962963vh;
+    right: 0;
+    top: 0;
+}
+
+@keyframes market-buy-btn{
+    from {
+        opacity: .5;
+    } to {
+        opacity: 1;
+    }
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .img-box > img{
+    width: 95px;
+    transition: .65s;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .item-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5vh;
+    font-family: "Akrobat Bold";
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .item-data > h1{
+    font-size: 1.1em;
+    opacity: .5;
+    letter-spacing: 1px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.markets-layout > .middle-items > .products-layout > .wrapper > .product > .item-data > p{
+    font-size: 1.65em;
+    opacity: .65;
+    letter-spacing: .5px;
+    font-family: "Akrobat ExtraBold";
+}
+
+.markets-layout > .middle-items > .shopping-cart{
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.markets-layout > .middle-items > .shopping-cart > header{
+    display: flex;
+    gap: 2vw;
+}
+
+.markets-layout > .middle-items > .shopping-cart > header > img{
+    width: 20%;
+    margin-left: 1vw;
+    transform: scaleX(-1)
+}
+
+.markets-layout > .middle-items > .shopping-cart > header > .texts{
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+}
+
+.markets-layout > .middle-items > .shopping-cart > header > .texts > h1{
+    font-family: "Akrobat ExtraBold";
+    font-size: 2.65em;
+}
+
+.markets-layout > .middle-items > .shopping-cart > header > .texts > p{
+    opacity: .5;
+    letter-spacing: 1px;
+    font-family: "Akrobat Light";
+    line-height: 1.2;
+}
+
+
+.markets-layout > .middle-items > .shopping-cart > .items-list{
+    height: 45vh;
+    background: rgba(255, 255, 255, .025);
+    border-radius: .25vw;
+    padding: 1.25vh;
+    overflow: scroll;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list::-webkit-scrollbar{
+    display: none;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+
+    width: 100%;
+    height: 100%;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > i{
+    align-self: center;
+    margin-top: 35%;
+    opacity: .05;
+    font-size: 10em;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item{
+    background: #acbabd15;
+    border-radius: .25vw;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    padding: 2vh 1.25vw;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > .actions{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > .actions > p{
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    gap: .55vw;
+    font-size: 1.5em;
+    width: 2.5vw;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > .actions > p > i{
+    font-size: .6em;
+    margin-top: 10%;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > .actions > i{
+    padding: 1vh .65vw;
+    border-radius: .25vw;
+    background: #f83f3f30;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > .actions > i:hover{
+    background: #f83f3f45;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .items-list > .wrapper > .item > p{
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .actions{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+    z-index: 10;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .actions > p{
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0;
+    border-radius: .25vw;
+    font-family: "Akrobat Bold";
+    letter-spacing: 2px;
+    color: #2b3239;
+    font-size: 1.25em;
+    border: 2px solid #ffffff00;
+    transition: 1s;
+}
+
+.markets-layout > .middle-items > .shopping-cart > .actions > p:hover{
+    border-color: #ffffff20;
+    background: transparent;
+    color: #fff;
+    transition: 1s;
+}

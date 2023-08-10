@@ -1,0 +1,183 @@
+:root {
+    --light-color: #34F00E;
+  
+    --inner1: #3581B8;
+    --outer1: #25597E;
+  
+    --inner2: #EF5B5B;
+    --outer2: #E92020;
+  
+    --inner3: #42E2B8;
+    --outer3: #1EC296;
+  
+    --inner4: #88498F;
+    --outer4: #5A315E;
+  }
+  
+.electrician-minigame {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+  svg {
+    width: 60vmin;
+    height: auto;
+  }
+  
+  .light {
+    opacity: 0;
+  }
+  
+  .drag {
+    fill: white;
+    opacity: 0;
+  }
+  
+  .line {
+    stroke-width: 18px;
+    pointer-events: none;
+  }
+  
+  .line-back {
+    stroke-width: 30px;
+    pointer-events: none;
+  }
+  
+  .line-1 {
+    stroke: var(--inner1);
+  }
+  .line-1.line-back {
+    stroke: var(--outer1);
+  }
+  
+  .line-2 {
+    stroke: var(--inner2);
+  }
+  .line-2.line-back {
+    stroke: var(--outer2);
+  }
+  
+  .line-3 {
+    stroke: var(--inner3);
+  }
+  .line-3.line-back {
+    stroke: var(--outer3);
+  }
+  
+  .line-4 {
+    stroke: var(--inner4);
+  }
+  .line-4.line-back {
+    stroke: var(--outer4);
+  }
+  
+  .c {
+    fill: #273065;
+    stroke: #1a1b36;
+  }
+  
+  .c, .d, .e, .f, .k, .u {
+    stroke-miterlimit: 10;
+  }
+  
+  .c, .d, .e, .f, .u, .y {
+    stroke-width: 5px;
+  }
+  
+  .d {
+    fill: #71160e;
+    stroke: #280f10;
+  }
+  
+  .e {
+    fill: #8c6c15;
+  }
+  
+  .e, .u {
+    stroke: #38321a;
+  }
+  
+  .f {
+    fill: #212021;
+    stroke: #000;
+  }
+  
+  .h {
+    fill: #9b3015;
+    stroke: #471d12;
+  }
+  
+  .h, .y {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .k, .y {
+    fill: none;
+  }
+  
+  .k {
+    stroke: #1d1d1b;
+    stroke-width: 6px;
+  }
+  
+  /* light color */
+  .l { 
+    fill: var(--light-color);
+  }
+  
+  /* Blue Cable */
+  .m {
+    fill: var(--outer1);
+  }
+  .n {
+    fill: var(--inner1);
+  }
+  
+  /* Red Cable */
+  .o {
+    fill: var(--outer2);
+  }
+  .p {
+    fill: var(--inner2);
+  }
+  
+  /* Yellow Cable */
+  .q {
+    fill: var(--outer3);
+  }
+  .r {
+    fill: var(--inner3);
+  }
+  
+  /* Purple Cable */
+  .s {
+    fill: var(--outer4);
+  }
+  .t {
+    fill: var(--inner4);
+  }
+  
+  
+  .u {
+    fill: #1d1d1b;
+  }
+  
+  .v {
+    fill: #5b5c64;
+  }
+  
+  .w {
+    fill: #292829;
+  }
+  
+  .x {
+    fill: #2f3038;
+  }
+  
+  .y {
+    stroke: #252526;
+  }

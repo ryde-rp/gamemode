@@ -1,0 +1,1382 @@
+<html>
+
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="closemenu" class="modal">
+            <div class="modal-content">
+                <h4>Clothing Store</h4>
+                <p>Ai vrea sa salvezi acest outfit?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" id="save" class="modal-close waves-effect waves-light btn green">Salveaza</a>
+                <a href="#!" id="discard" class="modal-close waves-effect waves-light btn red">Renunta</a>
+                <a href="#!" id="cancel" class="modal-close waves-effect waves-light btn grey">Intoarce-te la meniu</a>
+            </div>
+        </div>
+        <div id="clothesmenu" style="display: none" class="row">
+            <div id="clothes-container" class="col s5">
+                <div id="button_menu" style="margin-left: .5%;" class="row">
+                    <button id="button-clothes" data-target="clothes"
+                        class="button-menu waves-effect waves-light btn-large active">Haine</button>
+                    <button id="button-access" data-target="access"
+                        class="button-menu waves-effect waves-light btn-large">Accesorii</button>
+                    <button id="button-ped" data-target="ped"
+                        class="button-menu waves-effect waves-light btn-large">Peduri</button>
+                </div>
+                <div id="camera_menu" class="row">
+                    <div class="col s12">
+                        <button class="tog_btn tog_hat col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fab fa-redhat"></i>
+                        </button>
+                        <button class="tog_btn tog_glasses col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-glasses"></i>
+                        </button>
+                        <button class="tog_btn tog_tops col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-tshirt"></i>
+                        </button>
+                        <button class="tog_btn tog_head col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-meh"></i>
+                        </button>
+                        <button class="tog_btn tog_torso col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-user-tie"></i>
+                        </button>
+                        <button class="tog_btn tog_leg col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-socks"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="clothes" class="row">
+                    <div class="scroll-container">
+                        <div id="hats" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧢 &nbsp; Palarii</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hair" class="hair col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💉 &nbsp; Par</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI SECUNDARE</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jackets" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👔 &nbsp; Jachete</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="undershirts" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👕 &nbsp; Sub-Haina</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="torsos" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧤 &nbsp; Maini / Manusi</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="legs" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👖 &nbsp; Pantaloni</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="shoes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👟 &nbsp; Incaltaminte</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="decals" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">✨ &nbsp; Insigne</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="access" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <div id="masks" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🎭 &nbsp; Masti</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="glasses" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👓 &nbsp; Ochelari</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="earrings" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👂 &nbsp; Ureche</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="neck" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧣 &nbsp; Esarfe / Coliere</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="watches" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">⌚ &nbsp; Ceasuri</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="braclets" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💫 &nbsp; Bratari</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vest" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🦺 &nbsp; Veste</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="bags" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🎒 &nbsp; Genti</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ped" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <div id="warning_skins" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🔰 Informatii Importante</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <p>Prin schimbarea caracterului va asumati ca skinul o sa va fie sters complet si trebuie sa va faceti altul</p>
+                                    <button id="reset" class="waves-effect waves-light btn">⚠️ RESETEAZA</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="skins" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💉 Peduri</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">👦 Barbat: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="skin_male" class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">👩‍🦳 Femeie: <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="skin_female" class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="barbermenu" style="display: none" class="row">
+            <div id="barber-container" class="col s5">
+                <div id="button_menu" style="margin-left: .5%;" class="row">
+                    <button id="button-inheritance" data-target="inheritance"
+                        class="button-menu waves-effect waves-light btn active">Parinti</button>
+                    <button id="button-faceshape" data-target="faceshape"
+                        class="button-menu waves-effect waves-light btn">Fata</button>
+                    <button id="button-appear" data-target="appear"
+                        class="button-menu waves-effect waves-light btn">Piele</button>
+                    <button id="button-hair" data-target="bodyhair"
+                        class="button-menu waves-effect waves-light btn">Par</button>
+                    <button id="button-features" data-target="features"
+                        class="button-menu waves-effect waves-light btn">Makeup</button>
+                </div>
+                <div id="camera_menu" class="row">
+                    <div class="col s12">
+                        <button class="tog_btn tog_hat col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fab fa-redhat"></i>
+                        </button>
+                        <button class="tog_btn tog_glasses col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-glasses"></i>
+                        </button>
+                        <button class="tog_btn tog_mask col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-mask"></i>
+                        </button>
+                        <button class="tog_btn tog_tops col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-tshirt"></i>
+                        </button>
+                        <button class="tog_btn tog_head col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-meh"></i>
+                        </button>
+                        <button class="tog_btn tog_torso col s2 btn-cam waves-effect waves-light btn-large">
+                            <i class="fas fa-user-tie"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="inheritance" class="row">
+                    <div class="scroll-container">
+                        <div id="shapeFirstP" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🦳 &nbsp; Infatisare 1</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cap: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="shapeFirst" class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Piele: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="skinFirst" class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="shapeSecondP" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🦳 &nbsp; Infatisare 2</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cap: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="shapeSecond" class="input-number col s4" type="number" value="0" min="0"
+                                        max="45" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Piele: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="skinSecond" class="input-number col s4" type="number" value="0" min="0"
+                                        max="45" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="shapeThirdP" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🦳 &nbsp; Infatisare 3</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Cap: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="shapeThird" class="input-number col s4" type="number" value="0" min="0"
+                                        max="45" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Piele: <span
+                                            class="total-number">46</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input id="skinThird" class="input-number col s4" type="number" value="0" min="0"
+                                        max="45" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fmix" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👉🏻 &nbsp; Combinatia pielii</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <input id="shapeMix" type="range" class="slider-range" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="smix" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👉🏼 &nbsp; Combinatia pielii 2</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <input id="skinMix" type="range" class="slider-range" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tmix" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👉🏽 &nbsp; Combinatia pielii 3</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s12 panel-col">
+                                    <input id="thirdMix" type="range" class="slider-range" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="faceshape" style="display: none;" class="row">
+                    <div class="scroll-container">
+                        <div id="nose" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👃🏻 Nas</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Latimea Nasului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Width" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Inaltimea osului: <span
+                                            class="total-number"></span></h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Peak_Hight" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Inaltimea de varf: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Peak_Lenght" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Lungimea varfului: <span
+                                            class="total-number"></span></h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Bone_High" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Coborarea varfului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Peak_Lowering" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Rasucirea osului: <span
+                                            class="total-number"></span></h6>
+                                    <input type="range" class="slider-range" data-value="Nose_Bone_Twist" min="-100"
+                                        max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="brow" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👁️ Spranceana</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Inaltimea sprancenii: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="EyeBrown_High" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Adancimea sprancenelor: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="EyeBrown_Forward" min="-100"
+                                        max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cheek" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">😊 Obraji</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Inaltimea osului obrajului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Cheeks_Bone_High" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Latimea osului obrajului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Cheeks_Bone_Width" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Latimea obrazului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Cheeks_Width" min="-100"
+                                        max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jaw" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🦷 Osul maxilarului</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Latimea osului maxilarului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Jaw_Bone_Width" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Lungimea osului maxilarului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Jaw_Bone_Back_Lenght"
+                                        min="-100" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chin" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💀 Barbie</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Inaltimea osului barbii: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Chimp_Bone_Lowering" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Chin Bone Length: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Chimp_Bone_Lenght" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Lungimea osului barbiei: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Chimp_Bone_Width" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Fesura barbiei: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Chimp_Hole" min="-100"
+                                        max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="facefeats" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🔮 Diverse caracteristici</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Strabismul ochilor: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Eyes_Openning" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Grosimea buzelor: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Lips_Thickness" min="-100"
+                                        max="100" />
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Grosimea gatului: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="Neck_Thikness" min="-100"
+                                        max="100" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="appear" style="display: none;" class="row">
+                    <div class="scroll-container">
+                        <div id="Blemishes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧫 Pete</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">23</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Ageing" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🥱 Imbatranire:</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">14</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Complexion" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">⚖️ Complexitate</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">11</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="SunDamage" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🌞 &nbsp; Daune de la soare</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">10</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="MolesFreckles" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧫 Alunite si pistrui</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">17</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="BodyBlemishes" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🧫 Alunite si pistrui</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">11</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bodyhair" style="display: none;" class="row">
+                    <div class="scroll-container">
+                        <div class="hair col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💉 &nbsp; Par</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Texturi:  <span
+                                            class="total-number"></span></h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI SECUNDARE</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="FacialHair" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💉 &nbsp; Par facial</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Eyebrows" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">👁️ Sprancene</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">33</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ChestHair" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💉 &nbsp; Par piept</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">16</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container haircol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="features" style="display: none;" class="row">
+                    <div class="scroll-container">
+                        <div id="Makeup" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🤡 Makeup</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">74</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container makeupcol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI SECUNDARE</div>
+                                            <div class="collapsible-body color_palette_container makeupcol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Blush" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">🔮 Fard</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">6</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container makeupcol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Lipstick" class="col s12 panel">
+                            <div class="col s12 panel-title">
+                                <h6 class="grey-text text-lighten-3 panel-label">💄 Ruj</h6>
+                            </div>
+                            <div class="col s12 panel-bottom">
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Numar: <span
+                                            class="total-number">9</span>
+                                    </h6>
+                                    <button class="button-left col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_left</i>
+                                    </button>
+                                    <input class="input-number col s4" type="number" value="0" />
+                                    <button class="button-right col s4 waves-effect waves-light btn">
+                                        <i class="material-icons">chevron_right</i>
+                                    </button>
+                                </div>
+                                <div class="col s6 panel-col">
+                                    <h6 class="grey-text text-lighten-3 panel-label">Opacitate:  <span
+                                            class="total-number"></span>
+                                    </h6>
+                                    <input type="range" class="slider-range" data-value="0" min="0" max="100" />
+                                </div>
+                                <div class="col s12">
+                                    <ul class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header">🎨 CULORI</div>
+                                            <div class="collapsible-body color_palette_container makeupcol"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

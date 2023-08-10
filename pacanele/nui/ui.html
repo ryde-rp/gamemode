@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="design.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <div class="amount" style="display: none;">
+         <div class="input-amount">
+            <div class='input-wrapper'>
+               <input type='number' placeholder='1000000'
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength='7' id='bet-amount' />
+            </div>
+         </div>
+         <button class='insert-button'>
+            <img width="120" src='https://lonsdalegrove.com/site/wp-content/uploads/2015/03/50941_pay-deposit-button.png'/>
+         </button>
+      </div>
+      <div class="imgset">
+         <div class="img-wrap">
+            <div id="paytable">
+            </div>
+            <div id="overlay">
+               <div class="imgover"><img src="img/overlay.png" height="730" width="1400" align="middle" stroke="none" ></div>
+            </div>
+            <svg width="0" height="0">
+               <clipPath id="clipPolygon">
+                  <polygon points="699 705,769 706,765 679,700 678">
+                  </polygon>
+               </clipPath>
+            </svg>
+         </div>
+      </div>
+      <div id="stage">
+         <div id="rotate">
+            <div id="ring1" class="ring"></div>
+            <div id="ring2" class="ring"></div>
+            <div id="ring3" class="ring"></div>
+            <div id="ring4" class="ring"></div>
+            <div id="ring5" class="ring"></div>
+         </div>
+         <center>
+      </div>
+      <div id="aio">
+         <div class="comenzi">
+            <div class="left">
+               <span class="ownedCoins">
+                  CREDITS
+                  <div class="footer">
+                     <span id="ownedCoins"></span>
+                     <i class="fas fa-coins"></i>
+                  </div>
+               </span>
+               <span class="ownedBet">
+                  BET
+                  <div class="footer">
+                     <span id="ownedBet"></span>
+                     <i class="fas fa-coins"></i>
+                  </div>
+               </span>
+            </div>
+            <div class="right">
+               <span class="win">
+                  WIN
+                  <div class="footer">
+                     <span id="win">0</span>
+                     <i class="fas fa-coins"></i>
+                  </div>
+               </span>
+               </button>
+               <button class='roll'>
+               <i class="fas fa-sync"></i>
+               </button>
+               <div class='flex-column'>
+                  <div class='bets' id='plus'>
+                     <button class="betUp">BET +10</button>
+                     <button class="betUp100">BET +100</button>
+                     <button class="betUp1000">BET +1000</button>
+                     <button class="betUp10000">BET +10000</button>
+                  </div>
+                  <div class='bets' id='minus'>
+                     <button class="betDown">BET -10</button>
+                     <button class="betDown100">BET -100</button>
+                     <button class="betDown1000">BET -1000</button>
+                     <button class="betDown10000">BET -10000</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <ul class="cHistory">
+            <li></li>
+            <li id="h1"></li>
+            <li id="h2"></li>
+            <li id="h3"></li>
+            <li id="h4"></li>
+            <li id="h5"></li>
+            <li id="h6"></li>
+            <li id="h7"></li>
+            <li id="h8"></li>
+         </ul>
+         <center>
+            <input type="checkbox" id="sounds" name="soundOnOff" value="Sunete">
+            <label for="sounds"><span style="text-shadow: 1px 1px 1px black;">Sounds</span></label>
+         </center>
+      </div>
+      <script type="text/javascript" src="script.js"></script>
+   </body>
+</html>

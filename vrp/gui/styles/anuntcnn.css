@@ -1,0 +1,107 @@
+.announce-wrapper {
+    position:absolute;
+    right:1.5%;
+    top:13.5%;
+    width:20%;
+    height:auto;
+    background:linear-gradient(to right,#00000000,#00000045,#00000055,#00000055,#00000060);
+    border-radius:.35vw;
+    border:2px solid #ffffff05;
+    border-left:none;
+    display:flex;
+    flex-direction:column;
+    padding:.5vh .5vw;
+    padding-bottom:.5%;
+    max-height:20%;
+    overflow:hidden
+    }
+    
+    .announce-wrapper > .announce-text {
+    padding:.6vh 1vh;
+    opacity:.5;
+    text-align:left;
+    font-size:1em;
+    font-family:"Akrobat"
+    }
+    
+    .announce-wrapper > .announce-data-wrapper {
+    display:flex;
+    flex-direction:row;
+    gap:2.5%;
+    text-align:left;
+    border-bottom:2px solid #ffffff10;
+    padding:.5vh
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > h1 {
+    font-family:"Akrobat";
+    font-size:.8em;
+/*    background:linear-gradient(to left,rgba(33,117,245,.40),rgba(33,117,245,.40));*/
+    background:linear-gradient(to left,rgba(194, 80, 80,.40),rgba(194, 80, 80,.40));
+    padding:1vh 1vw;
+    border-radius:.25vw
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > p {
+    font-family:"Akrobat";
+    font-size:.8em;
+    background:linear-gradient(to left,rgba(194, 80, 80,.40),rgba(194, 80, 80,.40));
+    padding:1vh 1vw;
+    border-radius:.25vw;
+    transition:.3s
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > p:hover {
+    transition:.3s;
+    box-shadow:0 0 20px #ffffff40;
+    background:#ffffff30;
+    cursor:pointer
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > .close-circle {
+    transition:.3s;
+    position:relative;
+    font-size:.6em;
+    margin-left:auto;
+    background:#ffffff20;
+    border-radius:.25vw;
+    padding:1vh .9vw;
+    font-weight:500;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > .close-circle:hover {
+    background:linear-gradient(to left,rgba(194, 80, 80,.40),rgba(194, 80, 80,.40));
+    transition:.3s;
+    cursor:pointer
+    }
+    
+    .announce-wrapper > .announce-data-wrapper > .time-circle {
+    transition:.3s;
+    position:relative;
+    font-size:.8em;
+    margin-left:auto;
+    background:#ffffff20;
+    border-radius:.25vw;
+    padding:1vh .8vw;
+    font-weight:500;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation:anim-anunt-timer 15s
+    }
+    
+    @keyframes anim-anunt-timer {
+    from {
+    opacity:1
+    }
+    
+    to {
+    opacity:0
+    }
+    }

@@ -1,0 +1,7 @@
+.snake-app {
+    display: none;
+    height: 120%;
+    width: 100%;
+    background: rgb(243, 243, 243);
+    overflow: hidden;
+}

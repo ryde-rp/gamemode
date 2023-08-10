@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Open+Sans:wght@600&family=Smooch+Sans:wght@600&display=swap');
+
+.electrician-container {
+    width:75rem;
+    height: 45rem;
+
+    background-image: url('https://cdn.fairplay-rp.ro/recovery/electrician.png');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    transform: perspective(300px) rotateY(3deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.electrician-container .electrician-info {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.electrician-container .electrician-info .electrician-info-boxes {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.electrician-container .electrician-info .electrician-info-boxes .electrician-box {
+    min-height: 3rem;
+    min-width: 7rem;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.electrician-container .electrician-description {
+    margin-top: 3rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 15px;
+    max-width: 30rem;
+}
+
+.electrician-container .electrician-description .title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.electrician-container .electrician-description .description {
+    color: white;
+    opacity: .9;
+    font-size: 1.2rem;
+}
+
+.electrician-container .skills-bar {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    max-width: 60%;
+}
+
+.electrician-container .skills-bar .progressbar {
+    counter-reset: step;
+}
+
+.electrician-container .skills-bar .progressbar li {
+    list-style-type: none;
+    float: left;
+    min-width: 33%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.electrician-container .skills-bar .progressbar li:before {
+    font-family: FontAwesome; 
+    content: '\f023';
+    color:rgb(0, 132, 255);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid rgb(0, 132, 255);
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.electrician-container .skills-bar .progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(221, 221, 221, 0.795);
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.electrician-container .skills-bar .progressbar li:first-child:after {
+    content: none;
+}
+
+.electrician-container .skills-bar .progressbar li.active:before {
+    font-family: FontAwesome; 
+    color:rgb(0, 132, 255);
+    border: 2px solid rgb(0, 132, 255);
+    content: '\f00c';
+}
+
+.electrician-container .skills-bar .progressbar li.unlocked:before {
+    font-family: FontAwesome; 
+    color:rgb(0, 132, 255);
+    border: 2px solid rgb(0, 132, 255);
+    content: '\f09c';
+}
+
+.electrician-container .skills-bar .progressbar li:hover {
+    cursor: pointer;
+}
+
+.electrician-container .skills-bar .progressbar li.active + li:after {
+    background-color: rgb(0, 132, 255);
+}
+
+.electrician-container .button {
+    margin-top: 3rem;
+    margin-left: 7rem;
+
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.electrician-container .button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.938);
+}
+
+
+:root {
+    --light-color: #34F00E;
+  
+    --inner1: #3581B8;
+    --outer1: #25597E;
+  
+    --inner2: #EF5B5B;
+    --outer2: #E92020;
+  
+    --inner3: #42E2B8;
+    --outer3: #1EC296;
+  
+    --inner4: #88498F;
+    --outer4: #5A315E;
+  }
+  
+.electrician-minigame {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+  svg {
+    width: 60vmin;
+    height: auto;
+  }
+  
+  .light {
+    opacity: 0;
+  }
+  
+  .drag {
+    fill: white;
+    opacity: 0;
+  }
+  
+  .line {
+    stroke-width: 18px;
+    pointer-events: none;
+  }
+  
+  .line-back {
+    stroke-width: 30px;
+    pointer-events: none;
+  }
+  
+  .line-1 {
+    stroke: var(--inner1);
+  }
+  .line-1.line-back {
+    stroke: var(--outer1);
+  }
+  
+  .line-2 {
+    stroke: var(--inner2);
+  }
+  .line-2.line-back {
+    stroke: var(--outer2);
+  }
+  
+  .line-3 {
+    stroke: var(--inner3);
+  }
+  .line-3.line-back {
+    stroke: var(--outer3);
+  }
+  
+  .line-4 {
+    stroke: var(--inner4);
+  }
+  .line-4.line-back {
+    stroke: var(--outer4);
+  }
+  
+  .c {
+    fill: #273065;
+    stroke: #1a1b36;
+  }
+  
+  .c, .d, .e, .f, .k, .u {
+    stroke-miterlimit: 10;
+  }
+  
+  .c, .d, .e, .f, .u, .y {
+    stroke-width: 5px;
+  }
+  
+  .d {
+    fill: #71160e;
+    stroke: #280f10;
+  }
+  
+  .e {
+    fill: #8c6c15;
+  }
+  
+  .e, .u {
+    stroke: #38321a;
+  }
+  
+  .f {
+    fill: #212021;
+    stroke: #000;
+  }
+  
+  .h {
+    fill: #9b3015;
+    stroke: #471d12;
+  }
+  
+  .h, .y {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .k, .y {
+    fill: none;
+  }
+  
+  .k {
+    stroke: #1d1d1b;
+    stroke-width: 6px;
+  }
+  
+  /* light color */
+  .l { 
+    fill: var(--light-color);
+  }
+  
+  /* Blue Cable */
+  .m {
+    fill: var(--outer1);
+  }
+  .n {
+    fill: var(--inner1);
+  }
+  
+  /* Red Cable */
+  .o {
+    fill: var(--outer2);
+  }
+  .p {
+    fill: var(--inner2);
+  }
+  
+  /* Yellow Cable */
+  .q {
+    fill: var(--outer3);
+  }
+  .r {
+    fill: var(--inner3);
+  }
+  
+  /* Purple Cable */
+  .s {
+    fill: var(--outer4);
+  }
+  .t {
+    fill: var(--inner4);
+  }
+  
+  
+  .u {
+    fill: #1d1d1b;
+  }
+  
+  .v {
+    fill: #5b5c64;
+  }
+  
+  .w {
+    fill: #292829;
+  }
+  
+  .x {
+    fill: #2f3038;
+  }
+  
+  .y {
+    stroke: #252526;
+  }

@@ -1,0 +1,337 @@
+#contract_container {
+    display: flex;
+    position: absolute;
+    background:#D9D9D9;
+    width: 63.7063vh;
+    height: 78.4615vh;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.8881vh;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+}
+
+#contract_container * {
+    position: absolute;
+    color: black;
+}
+
+#contract_container .top_info {
+    display: flex;
+    top: 8.6014vh;
+    left: 4.4056vh;
+    width: calc(100% - 4.4056vh);
+}
+
+#contract_container .top_info .bb {
+    left: 0;
+    top: 0;
+    width: 0.979vh;
+    height: 5.5944vh;
+    background: #303030;
+}
+
+#contract_container .top_info .upper_text {
+    left: 1.7483vh;
+    top: 0.4895vh;
+    width: fit-content;
+    line-height: 87.5%;
+}
+
+#contract_container .top_info .down_text {
+    left: 1.7483vh;
+    top: 1.3287vh;
+    width: fit-content;
+    line-height: 87.5%;
+    font-weight: 600;
+    font-size: 3.6364vh;
+    line-height: 5.4545vh;
+    color:rgba(48, 48, 48, 1);
+}
+
+#contract_container .street_id {
+    display: flex;
+    top: 18.2517vh;
+    left: 6.1538vh;
+    width: calc(100% - 6.1538vh);
+    height: 3.3566vh;
+    line-height: 87.5%;
+}
+
+#contract_container .catre {
+    display: flex;
+    left: 4.4056vh;
+    top: 24.1958vh;
+    width: 12.4476vh;
+    height: 8.042vh;
+}
+
+#contract_container .catre .bara {
+    width: 0.6294vh;
+    height: 3.9161vh;
+    background-color: rgba(48, 48, 48, 1);
+}    
+
+#contract_container .catre .text {
+    top: 0.2797vh;
+    left: 1.7483vh;
+    font-weight: 700;
+    line-height: 87.5%;
+}    
+
+#contract_container .catre .id_box {
+    display: flex;
+    right: 0;
+    bottom: 0;
+    border: 0.0625em solid #303030;
+    border-radius: 0.4196vh;
+    width: 11.8182vh;
+    height: 3.5664vh;
+    align-items: center;
+}
+
+#contract_container .catre .id_box .text {
+    position: unset !important;
+    text-align: center;
+    width: 100%;
+    color: rgba(48,48,48,0.5);
+    font-weight: 600;
+    line-height: 87.5%;
+}
+
+#contract_container .de_la {
+    display: flex;
+    flex-direction: column;
+    left: 23.7063vh;
+    top: 24.1958vh;
+    width: 14.4056vh;
+    height: 5.8741vh;
+    font-size: 1.7483vh;
+    font-weight: 300;
+}
+
+#contract_container .de_la .tc {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 87.5%;
+    font-size: 1.8881vh;
+}
+
+#contract_container .de_la .tb {
+    display: block;
+    margin-top: 0.8392vh;
+    position: relative;
+    font-weight: 300;
+    line-height: 87.5%;
+    color: #303030;
+}
+
+#contract_container .data {
+    display: flex;
+    flex-direction: column;
+    left: 44.8951vh;
+    top: 24.1958vh;
+    width: 14.7552vh;
+    height: 5.5944vh;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8881vh;
+    line-height: 87.5%;
+}
+
+#contract_container .data .text {
+    position: relative;
+    margin-top: 0.6993vh;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.7483vh;
+    line-height: 87.5%;
+    color: #303030;
+}
+
+#contract_container .middle {
+    display: flex;
+    left: 4.4056vh;
+    top: 39.3007vh;
+    gap: 0.3497vh;
+    width: 55.2448vh;
+    height: 4.8252vh;
+}
+
+
+#contract_container .middle * {
+    position: relative;
+    color: white;
+    text-align: center;
+    line-height: 4.7552vh;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7483vh;
+}
+
+#contract_container .middle .nr {
+    width: 4.5455vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+#contract_container .middle .desc {
+    width: 25.5944vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+
+#contract_container .middle .sal {
+    display: flex;
+    width: 10.5594vh;
+    height: 4.7552vh;
+    background: #303030;
+    line-height: unset;
+    align-items: center;
+}
+
+#contract_container .middle .sal .text {
+    width: 100%;
+    line-height: 100%;
+}
+
+#contract_container .middle .sal2 {
+    width: 13.4965vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+
+#contract_container .middle_secrow {
+    display: flex;
+    left: 4.4056vh;
+    top: 44.4755vh;
+    gap: 0.3497vh;
+    width: 55.2448vh;
+    height: 4.8252vh;
+}
+
+
+#contract_container .middle_secrow * {
+    position: relative;
+    color: white;
+    text-align: center;
+    line-height: 4.7552vh;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7483vh;
+}
+
+#contract_container .middle_secrow .nr {
+    width: 4.5455vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+#contract_container .middle_secrow .desc {
+    width: 25.5944vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+
+#contract_container .middle_secrow .sal {
+    display: flex;
+    width: 10.5594vh;
+    height: 4.7552vh;
+    background: #303030;
+    line-height: unset;
+    align-items: center;
+}
+
+#contract_container .middle_secrow .sal .text {
+    width: 100%;
+    line-height: 100%;
+}
+
+#contract_container .middle_secrow .sal2 {
+    width: 13.4965vh;
+    height: 4.7552vh;
+    background: #303030;
+}
+
+#contract_container .semnatura {
+    display: flex;
+    left: 4.4056vh;
+    top: 50.5594vh;
+    /* width: 55.2448vh;
+    height: 18.1818vh; */
+    border: 0.125em dotted #CCCCCC;
+    border-radius: 1.049vh;
+    cursor: crosshair;
+    z-index: 1;
+}
+
+#contract_container #semnatura_view {
+    display: flex;
+    left: 4.4056vh;
+    top: 50.5594vh;
+    border: 0.125em dotted #CCCCCC;
+    border-radius: 1.049vh;
+    cursor: crosshair;
+    z-index: 1;
+    width: 54.81481481481482vh;
+    height: 17.962962962962965vh;
+}
+
+#contract_container .semnatura_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 4.4056vh;
+    top: 50.5594vh;
+    width: 55.2448vh;
+    height: 18.1818vh;
+    pointer-events: none;
+    user-select: none;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.0979vh;
+    line-height: 100%;
+    /* text-align: center; */
+    /* or 1.625em */
+
+    color: rgba(48, 48, 48, 0.5);
+}
+
+#contract_container .bottom {
+  top: 65.8042vh;
+  left: 4.4056vh;
+  width: 55.2448vh;
+  height: 7.6224vh;
+}
+
+#contract_container button {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7483vh;
+  line-height: 87.5%;
+  color:white;
+}
+
+#contract_container .bottom .semneaza {
+  outline: none;
+  border: none;
+  background-color: #303030;
+  width: 13.007vh;
+  height: 3.986vh;
+  bottom:0;
+  right: 0;
+}
+
+#contract_container .bottom .sterge {
+  outline: none;
+  border: none;
+  background-color: #303030;
+  width: 9.7902vh;
+  height: 3.986vh;
+  bottom:0;
+  left: 0;
+}

@@ -1,0 +1,10 @@
+--RegisterNetEvent("vRP:showPanelCode")
+--AddEventHandler("vRP:showPanelCode", function(x)
+--	SendNUIMessage({
+--		act = "interface",
+--		target = "panelReminder",
+--		code = x
+--	})
+--
+--	TriggerEvent("vRP:interfaceFocus", true)
+--end)

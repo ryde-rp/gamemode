@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Open+Sans:wght@600&family=Smooch+Sans:wght@600&display=swap');
+
+.constructor-container {
+    width:75rem;
+    height: 45rem;
+
+    background-image: url('https://cdn.fairplay-rp.ro/recovery/constructor.png');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    transform: perspective(300px) rotateY(3deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.constructor-container .constructor-info {
+    margin-top: 8rem;
+    margin-left: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: orange;
+}
+
+.constructor-container .constructor-info .constructor-info-boxes {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.constructor-container .constructor-info .constructor-info-boxes .constructor-box {
+    min-height: 3rem;
+    min-width: 7rem;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.constructor-container .constructor-description {
+    margin-top: 3rem;
+    margin-left: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 15px;
+    max-width: 30rem;
+}
+
+.constructor-container .constructor-description .title {
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: 600;
+}
+
+.constructor-container .constructor-description .description {
+    color: orange;
+    opacity: .9;
+    font-size: 1.2rem;
+}
+
+.constructor-container .skills-bar {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    max-width: 60%;
+}
+
+.constructor-container .skills-bar .progressbar {
+    counter-reset: step;
+}
+
+.constructor-container .skills-bar .progressbar li {
+    list-style-type: none;
+    float: left;
+    min-width: 33%;
+    position: relative;
+    text-align: center;
+    color: orange;
+}
+
+.constructor-container .skills-bar .progressbar li:before {
+    font-family: FontAwesome; 
+    content: '\f023';
+    color:orange;
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid orange;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.constructor-container .skills-bar .progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.constructor-container .skills-bar .progressbar li:first-child:after {
+    content: none;
+}
+
+.constructor-container .skills-bar .progressbar li.active:before {
+    font-family: FontAwesome; 
+    color:orange;
+    border: 2px solid orange;
+    content: '\f00c';
+}
+
+.constructor-container .skills-bar .progressbar li.unlocked:before {
+    font-family: FontAwesome; 
+    color:orange;
+    border: 2px solid orange;
+    content: '\f09c';
+}
+
+.constructor-container .skills-bar .progressbar li:hover {
+    cursor: pointer;
+}
+
+.constructor-container .skills-bar .progressbar li.active + li:after {
+    background-color: orange;
+}
+
+.constructor-container .button {
+    margin-top: 3rem;
+    margin-left: 7rem;
+
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.constructor-container .button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.938);
+}

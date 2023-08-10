@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+.bank-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: #1D1B34;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: #FFF;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+
+}
+
+/* HEADER */
+.bank-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 0vh 1vh;
+}
+
+.bank-header h1 {
+    font-size: 16px;
+    flex: 2;
+    text-align: center;
+    display: none;
+}
+
+/* BALANCE WRAPPER */
+.bank-balance-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5vh;
+}
+
+.bank-balance-wrapper h3 {
+    color: #55546D;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.bank-balance-wrapper h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.bank-balance-wrapper h1 span {
+    font-size: 17px;
+}
+
+/* HR */
+.bank-hr {
+  margin: 10px 60px;
+  height: 1px;
+  background: #55546D;
+    opacity: 0.5;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#1D1B34), to(#1D1B34), color-stop(50%, #55546D));
+}
+
+/* Make a transfer */
+.bank-transfer-wrapper {
+    display: block;
+    padding: 0 3vh;
+}
+
+.bank-transfer-wrapper h3 {
+    text-align: center;
+    font-size: 3vh;
+    padding-bottom: 1vh;
+}
+
+.bank-transfer-wrapper h3 i {
+    color: #55546D;
+}
+
+#bank-transfer-grid::-webkit-scrollbar {
+  display: none;
+}
+
+#bank-transfer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-auto-rows: 10vh;
+    grid-gap: 1.5vh 1vh;
+
+    max-height: 34vh;
+    overflow-y: auto;
+}
+
+.bank-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: .25vw;
+    background-color: #36354c;
+    transition: background-color .3s, border-radius .3s;
+    font-size: 1.2vh;
+}
+
+.bank-contact-side span {
+    white-space: nowrap;
+}
+
+.bank-contact-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank-contact-picture {
+  height: 4.850vh;
+  width: 4.850vh;
+  border-radius: .25vw;
+  transition: height .1s, width .1s;
+}
+
+.bank-add-icon {
+    font-size: 3vh;
+    transition: font-size .1s;
+}
+
+.bank-contact:not(.selected):hover {
+    background-color: #42415c;
+    border-radius: 5px;
+}
+
+.bank-contact:not(.selected):hover .bank-contact-picture {
+    width: 6vh;
+    height: 6vh;
+}
+
+.bank-contact:not(.selected):hover .bank-add-icon {
+    font-size: 4vh;
+}
+
+.bank-contact-side input {
+    background-color: #1D1B34;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 0.5vh;
+    margin: 0.2vh;
+    text-align: center;
+}
+
+.bank-contact-side input::-webkit-outer-spin-button,
+.bank-contact-side input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bank-contact-side .bank-btn {
+    padding: 0.5vh 4vh;
+    border-radius: 5px;
+    background-color: #1D1B34;
+    transition: background-color .3s;
+}
+
+.bank-contact-side .bank-btn:hover {
+    background-color: #42415c;
+}

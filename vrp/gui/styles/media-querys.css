@@ -1,0 +1,113 @@
+@media (min-width: 800px) {
+  .map-border > .square {
+    left: 2.5vh!important;
+    bottom: 2.2%!important;
+  }
+}
+
+@media (width: 1280px) and (height: 768px) {
+  .map-border > .square {
+    left: 1.9vh!important;
+    bottom: 2.0%!important;
+      width: 30.5vh!important;
+  }
+}
+
+@media (width: 1280px) and (height: 800px) {
+  .map-border > .square {
+    left: 1.9vh!important;
+    bottom: 2.0%!important;
+      width: 29.5vh!important;
+  }
+}
+
+@media (width: 1280px) and (height: 960px) {
+  .map-border > .square {
+    left: 1.9vh!important;
+    bottom: 2.0%!important;
+      width: 24.5vh!important;
+  }
+}
+
+@media (width: 1280px) and (height: 1024px) {
+  .map-border > .square {
+    left: 1.9vh!important;
+    bottom: 2.0%!important;
+      width: 22.5vh!important;
+  }
+}
+
+@media (width: 1440px) and (height: 900px) {
+  .map-border > .square {
+    left: 2.3vh!important;
+    bottom: 2.2%!important;
+      width: 29vh!important;
+  }
+}
+
+@media (width: 1600px) and (height: 1024px) {
+  .map-border > .square {
+    left: 2.3vh!important;
+    bottom: 2.2%!important;
+    width: 28vh!important;
+  }
+}
+
+@media (width: 1680px) and (height: 1050px) {
+  .map-border > .square {
+    left: 2.5vh!important;
+    bottom: 2.2%!important;
+    width: 29vh!important;
+  }
+}
+
+@media (width: 3840px) and (height: 2160px) {
+  .map-border > .square {
+    left: 2.4vh!important;
+    bottom: 6.1%!important;
+      width: 29.3vh!important;
+  }
+}
+
+@media (width: 3440px) and (height: 1440px) {
+  .map-border > .square {
+    left: 2.3vh!important;
+    bottom: 6.1%!important;
+      width: 29.3vh!important;
+  }
+}
+
+@media (width: 2560px) and (height: 1440px) {
+  .map-border > .square {
+    left: 2.3vh!important;
+    bottom: 2.2%!important;
+  }
+}
+
+@media (width: 1920px) and (height: 1440px) {
+  .map-border > .square {
+    left: 2vh!important;
+    bottom: 2.2%!important;
+  }
+}
+
+@media (width: 1920px) and (height: 1200px) {
+  .map-border > .square {
+    left: 2.2vh!important;
+    bottom: 2.2%!important;
+  }
+}
+
+@media (width: 1920px) and (height: 1080px) {
+  .map-border > .square {
+    left: 2.5vh!important;
+    bottom: 2.2%!important;
+  }
+}
+
+@media (width: 1280px) and (height: 720px) {
+  .map-border > .square {
+    left: 2.5vh!important;
+    bottom: 2.2%!important;
+  }
+}

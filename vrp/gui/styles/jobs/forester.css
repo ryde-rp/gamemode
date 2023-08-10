@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Open+Sans:wght@600&family=Smooch+Sans:wght@600&display=swap');
+
+.lumberjack-container {
+    width:75rem;
+    height: 45rem;
+
+    background-image: url('https://cdn.fairplay-rp.ro/recovery/taietor_de_lemne.png');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    transform: perspective(300px) rotateY(3deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.lumberjack-container .lumberjack-info {
+    margin-left: 6rem;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.lumberjack-container .lumberjack-info .lumberjack-info-boxes {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.lumberjack-container .lumberjack-info .lumberjack-info-boxes .lumberjack-box {
+    min-height: 3rem;
+    min-width: 7rem;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.lumberjack-container .lumberjack-description {
+    margin-left: 6rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 15px;
+    max-width: 30rem;
+}
+
+.lumberjack-container .lumberjack-description .title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.lumberjack-container .lumberjack-description .description {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.lumberjack-container .skills-bar {
+    margin-top: 2.5rem;
+    margin-left: -3rem;
+    max-width: 60%;
+}
+
+.lumberjack-container .skills-bar .progressbar {
+    margin-left: 6rem;
+    counter-reset: step;
+}
+
+.lumberjack-container .skills-bar .progressbar li {
+    list-style-type: none;
+    float: left;
+    min-width: 33%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.lumberjack-container .skills-bar .progressbar li:before {
+    font-family: FontAwesome; 
+    content: '\f023';
+    color:rgb(27, 145, 25);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid rgb(27, 145, 25);
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: rgba(235, 229, 229, 0.795);
+}
+
+.lumberjack-container .skills-bar .progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(235, 229, 229, 0.795);
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.lumberjack-container .skills-bar .progressbar li:first-child:after {
+    content: none;
+}
+
+.lumberjack-container .skills-bar .progressbar li.active:before {
+    font-family: FontAwesome; 
+    color:rgb(27, 145, 25);
+    border: 2px solid rgb(26, 104, 24);
+    content: '\f00c';
+}
+
+.lumberjack-container .skills-bar .progressbar li.unlocked:before {
+    font-family: FontAwesome; 
+    color:rgb(27, 145, 25);
+    border: 2px solid rgb(27, 145, 25);
+    content: '\f09c';
+}
+
+.lumberjack-container .skills-bar .progressbar li:hover {
+    cursor: pointer;
+}
+
+.lumberjack-container .skills-bar .progressbar li.active + li:after {
+    background-color: rgb(27, 145, 25);
+}
+
+.lumberjack-container .button {
+    margin-top: 3rem;
+    margin-left: 7rem;
+
+    min-width: 5rem;
+    min-height: 3rem;
+    max-width: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.lumberjack-container .button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.938);
+}

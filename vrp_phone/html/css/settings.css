@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+.settings-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(36, 36, 36, 0.9);
+    overflow: hidden;
+}
+
+.settings-app-header {
+    position: relative;
+    font-family: Poppins, sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    top: 70px;
+    color: white;
+}
+
+.settings-app-tab-appereance {
+    position: absolute;
+    top: 15vh;
+    height: 100%;
+    width: 100%;
+}
+
+.settings-app-tab-information {
+    position: absolute;
+    top: 22vh;
+    height: 100%;
+    width: 100%;
+}
+
+.settings-app-tab {
+    position: relative;
+    width: 90%;
+    border-radius: 0.15rem;
+    height: 6vh;
+    margin-bottom: 10px;
+    color: white;
+    background: rgba(23, 23, 23, 0.9);
+    left: 15px;
+    box-shadow: rgb(0, 0, 0) 0rem 0rem 0.1rem 0.05rem;
+}
+
+.settings-app-tab:hover {
+    background-color: rgb(220, 20, 60);
+    transition: all 0.5s ease 0s;
+}
+
+.settings-app-tab-header {
+    position: absolute;
+    top: -2.5vh;
+    height: 2.6vh;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+    width: 100%;
+}
+
+.settings-app-tab-header > p {
+    padding-left: 1vh;
+}
+
+.settings-tab-icon {
+    position: absolute;
+    left: 2vh;
+    top: 1.5vh;
+    font-size: 2.3vh;
+}
+
+.settings-tab-icon > img {
+    position: absolute;
+    width: 3.3vh;
+    height: 3.3vh;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0.5vh 0px;
+    margin-left: -0.3vh;
+}
+
+.settings-tab-title {
+    position: absolute;
+    left: 6.2vh;
+    top: 1.2vh;
+    font-size: 1.3vh;
+    font-family: Poppins, sans-serif;
+}
+
+.settings-tab-description {
+    position: absolute;
+    left: 6.2vh;
+    top: 3.2vh;
+    font-size: 1.2vh;
+    font-family: Poppins, sans-serif;
+    color: white;
+}
+
+.settings-background-tab {
+    display: block;
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    background: rgb(36, 36, 36);
+}
+
+.settings-profilepicture-tab {
+    display: block;
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    background: rgb(36, 36, 36);
+}
+
+.background-list::-webkit-scrollbar {
+    display: none;
+}
+
+.background-list {
+    display: grid;
+    height: 34vh;
+    width: 15vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vh;
+    margin: 7vh auto 0px;
+    padding: 2vh 1vh;
+    overflow-y: auto;
+}
+
+.background-item {
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-item > i {
+    color: rgb(8, 196, 17);
+    position: absolute;
+    top: 1vh;
+    right: 1.250vh;
+}
+
+.background-item.background-custom-item {
+    background: rgb(51, 51, 51);
+    display: grid;
+    align-content: center;
+}
+
+.background-options {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 13vh;
+}
+
+.background-option {
+    position: relative;
+    width: 90%;
+    border-radius: 0.15rem;
+    height: 6vh;
+    margin-bottom: 10px;
+    color: white;
+    background: rgba(23, 23, 23, 0.9);
+    left: 15px;
+    box-shadow: rgb(0, 0, 0) 0rem 0rem 0.1rem 0.05rem;
+}
+
+.background-option:hover {
+    background-color: rgb(220, 20, 60);
+    transition: all 0.5s ease 0s;
+}
+
+.background-option-icon {
+    position: absolute;
+    height: 100%;
+    width: 6vh;
+    text-align: center;
+    line-height: 7vh;
+    font-size: 2.3vh;
+    color: rgb(251, 197, 49);
+}
+
+.background-option-title {
+    position: absolute;
+    left: 6vh;
+    top: 1.5vh;
+    text-align: center;
+    color: white;
+    font-size: 1.3vh;
+    font-family: Poppins, sans-serif;
+}
+
+.background-option-description {
+    position: absolute;
+    left: 6vh;
+    top: 3.6vh;
+    text-align: center;
+    color: white;
+    font-size: 1.1vh;
+    font-family: Poppins, sans-serif;
+}
+
+.background-option-current {
+    position: absolute;
+    right: 3vh;
+    top: 2.5vh;
+    text-align: center;
+    font-size: 1.6vh;
+    color: green;
+    font-family: Poppins, sans-serif;
+}
+
+.background-buttons {
+    position: absolute;
+    bottom: 40px;
+    height: 5vh;
+    width: 100%;
+}
+
+.background-button {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    line-height: 4.7vh;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5vh;
+    transition: all 0.05s ease 0s;
+}
+
+.background-button:hover {
+    border-top: 0.3vh solid rgb(220, 20, 60);
+}
+
+.background-custom {
+    display: none;
+    position: absolute;
+    height: 40%;
+    width: 80%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 5px 0px inset;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    top: -23vh;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+.background-custom-title {
+    font-family: Poppins, sans-serif;
+    padding: 2vh;
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+.custom-background-input {
+    position: absolute;
+    left: 1vh;
+    border: none;
+    outline: none;
+    height: 3.5vh;
+    width: 21vh;
+    font-family: Poppins, sans-serif;
+    background: rgb(235, 235, 235);
+    border-radius: 2vh;
+    text-align: center;
+}
+
+.custom-background-input::placeholder {
+    text-align: center;
+}
+
+.background-custom-buttons {
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    height: 5vh;
+}
+
+.custom-background-button {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    line-height: 4.1vh;
+    color: black;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5vh;
+    transition: all 0.08s ease 0s;
+    border-bottom: 2px solid rgba(232, 66, 24, 0);
+}
+
+.custom-background-button:hover {
+    font-weight: bolder;
+    color: rgb(220, 20, 60);
+}
+
+.profilepicture-options {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 13vh;
+}
+
+.profilepicture-option {
+    position: relative;
+    width: 90%;
+    border-radius: 0.15rem;
+    height: 6vh;
+    margin-bottom: 10px;
+    color: white;
+    background: rgba(23, 23, 23, 0.9);
+    left: 15px;
+    box-shadow: rgb(0, 0, 0) 0rem 0rem 0.1rem 0.05rem;
+}
+
+.profilepicture-option-icon {
+    position: absolute;
+    height: 100%;
+    width: 6vh;
+    text-align: center;
+    line-height: 7vh;
+    font-size: 2.3vh;
+    color: rgb(251, 197, 49);
+}
+
+.profilepicture-option-title {
+    position: absolute;
+    left: 6vh;
+    top: 1.5vh;
+    text-align: center;
+    color: white;
+    font-size: 1.3vh;
+    font-family: Poppins, sans-serif;
+}
+
+.profilepicture-option-description {
+    position: absolute;
+    left: 6vh;
+    top: 3.6vh;
+    text-align: center;
+    color: white;
+    font-size: 1.1vh;
+    font-family: Poppins, sans-serif;
+}
+
+.profilepicture-option-current {
+    position: absolute;
+    right: 3vh;
+    top: 2.5vh;
+    text-align: center;
+    font-size: 1.6vh;
+    color: green;
+    font-family: Poppins, sans-serif;
+}
+
+.profilepicture-buttons {
+    position: absolute;
+    bottom: 40px;
+    height: 5vh;
+    width: 100%;
+}
+
+.profilepicture-button {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    line-height: 4.7vh;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5vh;
+}
+
+.profilepicture-button:hover {
+    border-top: 0.3vh solid rgb(220, 20, 60);
+}
+
+.profilepicture-custom {
+    display: none;
+    position: absolute;
+    height: 40%;
+    width: 80%;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 0px 5px 0px inset;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    top: -23vh;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+.profilepicture-custom-title {
+    font-family: Poppins, sans-serif;
+    padding: 2vh;
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+.custom-profilepicture-input {
+    position: absolute;
+    left: 1vh;
+    border: none;
+    outline: none;
+    height: 3.5vh;
+    width: 21vh;
+    font-family: Poppins, sans-serif;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+.custom-profilepicture-input::placeholder {
+    text-align: center;
+}
+
+.profilepicture-custom-buttons {
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    height: 5vh;
+}
+
+.custom-profilepicture-button {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    line-height: 4.1vh;
+    color: black;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5vh;
+    transition: all 0.08s ease 0s;
+    border-bottom: 2px solid rgba(232, 66, 24, 0);
+}
+
+.custom-profilepicture-button:hover {
+    font-weight: bolder;
+    color: rgb(220, 20, 60);
+}
+
+.switch {
+    position: absolute;
+    width: 50px;
+    height: 24px;
+    top: 50%;
+    right: 2vh;
+    transform: translateY(-50%);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0px;
+    background-color: rgb(204, 204, 204);
+    transition: all 0.4s ease 0s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: all 0.4s ease 0s;
+}
+
+input:checked + .slider {
+    background-color: rgb(33, 150, 243);
+}
+
+input:focus + .slider {
+    box-shadow: rgb(33, 150, 243) 0px 0px 1px;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}

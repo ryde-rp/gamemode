@@ -1,0 +1,431 @@
+.server-shop {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(80deg, #1a1a1a, rgba(60, 60, 60));
+    font-family:"Akrobat";
+    display: inline-flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-shop .shadowBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    background-image: url("https://cdn.fairplay-rp.ro/recovery/image_13_2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.server-shop .shadowBg:nth-of-type(2){
+    transform: rotate(180deg);
+  }
+
+.server-shop .wetEffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://cdn.fairplay-rp.ro/christmasEvt/eventShop/wetEffect.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}  
+
+.server-shop .information-box {
+    margin-left: 3vh;
+    width: 65vh;
+    height: 80%;
+    border-radius: .35vw;
+    background: linear-gradient(to top, #26350a, #5a8828, #7ec73e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    z-index: 1;
+}
+
+.server-shop .information-box .title {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .50vw;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.server-shop .information-box .coin-icon {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #ffffff90;
+    width: 13vh;
+    height: 13vh;
+    border-radius: 50%;
+}
+
+.server-shop .information-box .coin-icon i {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.server-shop .information-box .description {
+    width: 90%;
+    opacity: 1;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.server-shop .information-box .owned-coins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.server-shop .information-box .creator-code {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.server-shop .information-box .creator-code input {
+    padding:1.65vh;
+    text-align:center;
+    width:25vh;
+    outline:none;
+    border:none;
+    background:#ffffff10;
+    border-radius:.25vw;
+    text-transform:uppercase;
+    font-family:"Akrobat";
+    letter-spacing:.25vh;
+    color:#fff;
+    font-size:1.2em;
+}
+
+.server-shop .information-box .creator-code input::placeholder {
+    color:#fff;
+    opacity:.5
+}
+
+.server-shop .information-box .money-image {
+    margin-top: 2vh;
+    width: 100%;
+    height: 10vh;
+    background-image: url(https://cdn.fairplay-rp.ro/recovery/bani-smecheri.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.server-shop .information-box .creator-code .creatorcode-description {
+    width: 90%;
+    text-align: center;
+}
+
+.server-shop .store-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    z-index: 1;
+}
+
+.server-shop .store-wrapper .store-information {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.server-shop .store-wrapper .store-information .main-informations {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.2vw;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 4vh;
+    font-size: 1.5rem;
+    border: 2px solid #ffffff;
+    border-radius: .70vw;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .close-button:hover {
+    opacity: .5;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info i {
+    font-size: 2rem;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info .line {
+    width: 1px;
+    height: 3rem;
+    background: #ffffff;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info .texts h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info .texts p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.server-shop .store-wrapper .store-information .main-informations .store-contentcreator-info .texts b {
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.server-shop .store-wrapper .store-information .change-page {
+    margin-right: 2.5vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.server-shop .store-wrapper .store-information .change-page .page-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 2.5vh;
+    font-size: 1.5rem;
+    border: 2px solid #ffffff;
+    border-radius: .70vw;
+}
+
+.server-shop .store-wrapper .store-information .change-page .page-button:hover {
+    opacity: .5;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-information .change-page .page-number {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.server-shop .store-wrapper .store-items {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    height: 73vh;
+    width: 98%;
+}
+
+.server-shop .store-wrapper .store-items .store-item {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 2vw;
+    background: rgba(0, 0, 0, .20);
+    border-radius: .25vw;
+    height: 97%;
+    width: 45vh;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-data {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description {
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: .7vw;
+    width: 90%;
+    height: 45%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description.vehicle {
+    align-items: center;
+    text-align: center;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+.server-shop .store-wrapper .store-items .store-item .store-item-description::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+.server-shop .store-wrapper .store-items .store-item .store-item-description::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+.server-shop .store-wrapper .store-items .store-item .store-item-description::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+.server-shop .store-wrapper .store-items .store-item .store-item-description::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .item-beneficiu {
+    display: inline-flex;
+    justify-content: left;
+    align-items: left;
+    gap: .3vw;
+    text-transform: uppercase;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .view-product-images {
+    padding: 1vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3vw;
+    width: 100%;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .view-product-images:hover {
+    opacity: .7;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .view-product-images h1 {
+    font-size: 1rem;  
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .item-vehicles {
+    padding: 0 1vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: left;
+    justify-content: left;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .item-beneficiu.veh-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-description .item-beneficiu.veh-center p {
+    width: 100%;
+}
+
+.server-shop .store-wrapper .store-items .store-item .buy-item {
+    margin-bottom: 1.5rem;
+    width: 70%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.329);
+    padding: 1.35vh;
+    border-radius: 10vw;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: .15vh;
+    margin-top: auto;
+    color: #ffffff;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-items .store-item .buy-item:hover {
+    opacity: .7;
+    transition: 1s all;
+}
+
+.server-shop .store-wrapper .store-items .store-item .store-item-data img {
+    width: 22vh;
+}
+
+.server-shop .shop-photos-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(80deg, #1a1a1a8f, #1a1a1a91);
+    z-index: 1;
+}
+
+.server-shop .shop-photos-wrapper .shop-background {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: url(https://cdn.fairplay-rp.ro/recovery/poze-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: resizeFrame .5s;
+}
+
+.server-shop .shop-photos-wrapper .shop-background .image-wrapper {
+    width: 60%;
+    height: 62%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-shop .shop-photos-wrapper .shop-background .image-wrapper .image-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-shop .shop-photos-wrapper .shop-background .image-wrapper .image-data .image-container {
+    display: block;
+    position: relative;
+}
+
+.server-shop .shop-photos-wrapper .shop-background .image-wrapper .image-data .image-info {
+    margin-left: 2vh;
+    width: 70%;
+}
+
+@keyframes resizeFrame{
+    from {
+        transform: scale(25%);
+    } to {
+        transform: scale(100%);
+    }
+}

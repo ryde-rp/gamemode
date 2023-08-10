@@ -1,0 +1,210 @@
+@import "https://fonts.cdnfonts.com/css/akrobat";
+
+body { overflow: hidden; }
+
+#CarRadio {
+    position: absolute;
+    color: #9772FB;
+    top: 50vh;
+}
+
+#CarRadio > h1 {
+    position: relative;
+    bottom: 13vh;
+    left: 81.6vw;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 0.5vh;
+    font-family: 'Akrobat';
+    letter-spacing: 0.09em;
+}
+
+#CarRadio > h1 > p {
+    font-size: 1.1em;
+}
+
+#youtubeLink {
+    position: absolute;
+    bottom: 10vh;
+    left: 81vw;
+    width: 310px;
+    text-align: center;
+    height: 35px;
+    outline: none;
+    border-radius: 3vw;
+	padding-left : 15px;
+    padding-right: 15px;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	letter-spacing: 0.13em;
+    font-weight: bold;
+    color: #ffffff;
+    background: #ffffff20;
+    font-family: 'Akrobat';
+    border: 0.1vh solid #ffffff40;
+    transition: .3s;
+}
+
+#youtubeLink:active {
+    box-shadow: 0 0 50px #ffffff20;
+}
+
+#volumeButton {
+    width: 100px;
+    height: 35px;
+    border-radius: 3vw;
+    background: #9772FB;
+    background-size: 120%;
+    background-position: 80% 10%;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    text-align: center;
+    margin-left: 5px;
+	letter-spacing: 2px;
+	font-family: 'Akrobat';
+	font-size: 15;
+    transition: .6s;
+}
+
+#volumeButton {
+    position: absolute;
+    top: 2vh;
+    left: 81vw;
+    margin: 0 auto;
+    width: 310px;
+    height: 35px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#volumeButton:hover {
+    font-size: 17;
+    animation: animHover 1s infinite;
+}
+
+#playButton {
+    width: 100px;
+    height: 35px;
+    border-radius: 3vw;
+    background: #9772FB;
+    background-size: 120%;
+    background-position: 80% 10%;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    text-align: center;
+    margin-left: 5px;
+	letter-spacing: 2px;
+	font-family: 'Akrobat';
+	font-size: 15;
+    transition: .6s;
+}
+
+#playButton {
+    position: absolute;
+    bottom: 5.5vh;
+    left: 81vw;
+    margin: 0 auto;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#playButton:hover {
+    font-size: 17;
+    animation: animHover 1s infinite;
+}
+
+#stopButton {
+    width: 100px;
+    height: 35px;
+    border-radius: 3vw;
+    background: #9772FB;
+    background-size: 120%;
+    background-position: 80% 10%;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    text-align: center;
+    margin-left: 5px;
+	letter-spacing: 2px;
+	font-family: 'Akrobat';
+	font-size: 15;
+    transition: .6s;
+}
+
+#stopButton {
+    position: absolute;
+    bottom: 5.5vh;
+    left: 89.5vw;
+    margin: 0 auto;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#stopButton:hover {
+    font-size: 17;
+    animation: animHover 1s infinite;
+}
+
+@keyframes animHover {
+    0% { 
+        box-shadow: 0 0 0 0px #ffffff50; 
+    }
+    100% { 
+        box-shadow: 0 0 0 10px rgba(13, 10, 200, 0); 
+    }
+}
+
+.ListenMusic-Texts {
+    position: absolute;
+    top: 73%;
+    left: 1.5%;
+}
+
+.ListenMusic-Texts > h1 {
+    color: #fff;
+    font-family: 'Akrobat';
+    line-height: 0.9vh;
+    font-size: 1.5em;
+    margin-top: -4vh;
+    margin-left: 3.7vw;
+    letter-spacing: 0.05em;
+}
+
+.ListenMusic-Texts > h1 > p {
+    color: #fff;
+    opacity: .6;
+    font-family: 'Akrobat';
+    font-weight: 200;
+    font-size: 0.7em;
+}
+
+/* .ListenMusic-Shadow {
+    position: absolute;
+    top: -7vh;
+    left: -4vh;
+    width: 20%;
+    height: 300%;
+    background-image: url('https://imgur.com/L3tSO3F.png');
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+} */
+
+.ListenMusic-Texts > i {
+    font-size: 1.5em;
+    background: #9772FB;
+    color: rgb(255, 255, 255);
+    padding: 1.3vh;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+}

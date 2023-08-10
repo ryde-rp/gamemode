@@ -1,0 +1,244 @@
+@import "https://fonts.cdnfonts.com/css/akrobat";
+
+.color-0{color: #fff;}
+.color-1{color: #f44;}
+.color-2{color: #9c0;}
+.color-3{color: #fb3;}
+.color-4{color: #09c;}
+.color-5{color: #33b5e5;}
+.color-6{color: #a6c;}
+.color-8{color: #910003;}
+.color-9{animation: rainbow 3s linear infinite;}
+
+/* Culori custom */
+.color-u{color: lightgray;}
+.color-g{color: #0de96f;}
+/*.color-o{color: #F18F01;}*/
+.color-p{color: #9772FB;}
+.color-e{color: #FF9914;}
+/*.color-c{color: #F7CB15;}*/
+.color-t{color: #5EB1BF;}
+.color-j{color: #41BBD9;}
+.color-f{color: #0074ba;}
+.color-z{color: #43AA8B;}
+.color-i{color: #291a33;}
+.color-s{color: #FF9E00;}
+.color-l{color: #FFD500;}
+
+@keyframes rainbow {
+  from { color: #8f00ff; }
+  15% { color: #a34de2; }
+  30% { color: #ff7f00; }
+  45% { color: #0f0; }
+  60% { color: #ff0; }
+  75% { color: #ff7f00; }
+  90% { color: #ff0000; }
+  to { color: #8f00ff; }
+}
+
+* {
+  font-family: 'Akrobat', cursive;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: 'Akrobat', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+.chat-window {
+  position: absolute;
+  top: 2.5%; 
+  left: .8%;
+  width: 30%;
+  height: 22%;
+  max-width: 1000px;
+  -webkit-animation-duration: 2s;
+
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  z-index: -1;
+}
+
+.header {
+  /* position: absolute; */
+  width: 100%;
+  left: .8%;
+  display: inline-block;
+  top: 30%;
+  z-index: 2;
+}
+
+.tablink {
+  background-color: #12131a84;
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 12px; 
+  border-radius: 3px;
+  margin: 2px;
+}
+
+.borderBotLeft {
+  border-bottom-left-radius: 1vw;
+}
+
+.borderBotRight {
+  border-bottom-right-radius: 1vw;
+}
+
+.tablink:hover {
+  color: #f0f8ff;
+  background-color: #E4E8F3;
+  color: #22242A;
+}
+
+#suffixchat {
+  position: absolute;
+  font-size: 19px;
+  right: 2.5%;
+  top: 19.5%;
+  opacity: .5;
+}
+
+.chat-messages {
+  transition: all .5s;
+  position: relative;
+  height: 70%;
+  animation: bounceInLeft .7s;
+  text-shadow: 0 0 #000;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  word-break: break-all;
+  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+  text-shadow: horizontal-offset vertical-offset blur color;
+  direction: rtl;
+  font-size: 18px;
+}
+
+.ScrollArea {
+  direction: ltr;
+}
+
+.chat-messages::-webkit-scrollbar {
+  direction: ltr;
+  width: 4px;
+  border-radius: 10px;
+  display: none;
+}
+  
+.chat-messages::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+}
+
+
+.chat-input {
+  font-size: 12px;
+  position: relative;
+
+  /* top: 25%; */
+  left: .8%;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  border-radius: 1vw;
+}
+
+.prefix {
+  font-size: 1.8vh;
+  position: absolute;
+  left: .208%;
+}
+
+textarea {
+  font-size: 15px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  color: #fff;
+  background: rgba(42, 40, 42, .5);
+  width: 100%;
+  border-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  resize: none;
+  line-height: 1.55;
+  padding-right: 3vw;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+.msg {
+  animation: fadeIn .5s;
+  display: table;
+  margin: 3px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  font-family: 'Akrobat', sans-serif;
+  position: relative;
+  transition: all .3s;
+  filter: none !important;
+}
+
+.msg:hover {
+  font-weight: 700 !important;
+}
+
+.multiline {
+  white-space: pre-line;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: .5%;
+  padding-left: 1.4%;
+  font-size: 1.65vh;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(36, 36, 36, .5);
+  width: 100%;
+  display:none;
+}
+
+.help {
+  color: #b0bbbd;
+}
+
+.disabled {
+  color: #b0bbbd;
+}
+
+.suggestion {
+  margin-bottom: .5%;
+}
+
+.hidden {
+  display: none;
+}

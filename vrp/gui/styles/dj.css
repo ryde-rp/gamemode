@@ -1,0 +1,263 @@
+@import "https://fonts.cdnfonts.com/css/akrobat";
+body {overflow: hidden;}
+#fairplay-djscript {display: none;}
+.fairplay-djscriptButtons {
+    z-index: 4;
+    position: absolute;
+    left: 62vw;
+    bottom: 5vh;
+}
+
+.fairplay-djscriptButtons > .fairpaly-djscriptTexts {
+    position: relative;
+    font-family: 'Akrobat';
+    font-weight: 100;
+    letter-spacing: .1em;
+    color: #fff;
+    opacity: .7;
+    justify-content: center;
+    text-align: center;
+}
+
+.fairplay-djscriptButtons > .fairpaly-djscriptTexts > p {font-weight: 100;}
+
+.fairplay-djscriptButtons > .fairpaly-djscriptTexts > span > p {
+    position: relative;
+}
+
+.fairplay-djscriptButtons > .fairpaly-djscriptTexts > span > i {
+    font-size: 2em;
+    animation: 3s rainbow linear infinite;
+}
+
+.fairplay-djscriptButtons > button {
+    transform: rotate3d(30deg);
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .2em;
+    color: #fff;
+    z-index: 1;
+    margin: 5px;
+    background-color: #ffffff30;
+    border: none;
+    transition: .5s all;
+    width: 6vw;
+    height: 4vh;
+    border-radius: .1em;
+    text-transform: uppercase;
+}
+
+.fairplay-djscriptButtons > .fairplay-djscriptInput {
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+.fairplay-djscriptButtons > .fairplay-djscriptInput > input {
+    background-color: #ffffff30;
+    color: #fff;
+    width: 25vw;
+    height: 3vh;
+    text-align: center;
+    border: none;
+    border-radius: .1em;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    letter-spacing: .08em;
+    box-shadow: 0 0 0 4px #ffffff10;
+    transition: .5s;
+}
+
+.fairplay-djscriptButtons > .fairplay-djscriptInput > input:hover {
+    background: #ffffff50;
+}
+
+@keyframes rainbow {
+  from { text-shadow: 0 0 30px #8f00ff; color: #8f00ff;}
+  15% { text-shadow: 0 0 30px #a34de2; color:#a34de2;}
+  30% { text-shadow: 0 0 30px #ff7f00; color:#ff7f00;}
+  45% { text-shadow: 0 0 30px #0f0; color:#0f0;}
+  60% { text-shadow: 0 0 30px #ff0; color:#ff0;}
+  75% { text-shadow: 0 0 30px #ff7f00; color:#ff7f00;}
+  90% { text-shadow: 0 0 30px #ff0000; color:#ff0000;}
+  to { text-shadow: 0 0 30px #8f00ff; color:#8f00ff;}
+}
+
+.fairplay-djscriptButtons > button:hover {background: #ffffff20;box-shadow: 0 0 0 4px #ffffff10;}
+.fairplay-djscriptBackground {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-image: url('https://imgur.com/NCkjvS9.png');background-size: 100% 100%;background-repeat: no-repeat;}
+.fairplay-djscriptDj {position: absolute;right: 0;bottom: 0;z-index: 3;}
+.fairplay-djscriptDjbackgroundSmoke {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-image: url('https://imgur.com/VRuHzp9.png');background-repeat: no-repeat;}
+.fairplay-djscriptDjbackground {position: absolute;top: 10vh;left: 0;width: 100%;height: 100%;background-image: url('https://imgur.com/1Paep1a.png');background-repeat: no-repeat;z-index: 1;}
+.fairplay-djscriptMainBackground {position: absolute; top: 0; left: 0;width: 100%;height: 100%;background-image: url('https://imgur.com/5E2xIUN.png');background-size: 100% 100%;background-repeat: no-repeat;z-index: -1;}
+.fairplay-djscriptMainBackgroundShadow {position: absolute; top: 0; left: 0;width: 100%;height: 100%;background-image: url('https://imgur.com/3fcb1Ni.png');opacity:.8;background-size: 100% 100%;background-repeat: no-repeat;z-index: -1;}
+
+/* hint */
+
+.fairplay-djscript-closeMenu {
+    position: absolute;
+    bottom: 5vh;
+    margin: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.fairplay-djscript-closeMenu > .fairplay-djscript-closeMenu-texts > span > h1 {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+}
+
+.fairplay-djscript-closeMenu > .fairplay-djscript-closeMenu-texts {
+    position: relative;
+    font-family: 'Akrobat';
+    font-weight: bold;
+    width: 2vw;
+    height: 2vh;
+    color: #000;
+    box-shadow: 0 6px 0 #000;
+    background-color: #fff;
+    border-radius: .3vw;
+}
+
+.fairplay-djscript-closeMenu > .fairplay-djscript-closeMenu-texts:hover {
+    box-shadow: 0 4px 0 #000;
+    cursor: pointer;
+}
+
+.fairplay-djscriptHint {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('https://imgur.com/7aDNqNL.png');
+    background-size: 100% 100%;
+    text-align: center;
+    justify-content: center;
+    animation: 1s intrarehint linear;
+}
+
+.fairplay-djscriptHint > .fairplay-djscriptHint-texts {
+    line-height: 5vh;
+    font-family: 'Akrobat';
+    letter-spacing: .2em;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+@keyframes intrarehint {
+    from {
+        top: -13%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+/* historic */
+
+.fairplay-djscript-Historic {
+    position: absolute;
+    z-index: 5;
+    top: 28vh;
+    left: 2vh;
+    font-family: 'Akrobat';
+    color: #fff;
+}
+
+.fairplay-djscript-Historic > .fairplay-djscript-Historic-Title > h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.fairplay-djscript-Historic > .fairplay-djscript-Historic-MainHistoric {
+    position: relative;
+    overflow: auto;
+    height: 41vh;
+    width: 18.5vw;
+    line-height: 2vh;
+}
+
+.fairplay-djscript-Historic > .fairplay-djscript-Historic-MainHistoric > p {
+    background-color: #ffffff20;
+    padding: 1vh;
+    width: 15.5vw;
+    transition: .5s all;
+    border-radius: .1em;
+    margin-left: .6vw
+}
+
+.fairplay-djscript-Historic > .fairplay-djscript-Historic-MainHistoric > p:hover {background-color: #ffffff50;box-shadow: 0 0 0 4px #ffffff20;cursor: pointer;}
+
+::-webkit-scrollbar {
+    background-color: #ffffff30;
+    border-radius: 1vw;
+    width: .2vw;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(134, 0, 224, 0.5); 
+  border-radius: 1vw;
+}
+
+#fairplay-djscript-notify {
+    position: relative;
+    top: 35vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    font-family: 'Akrobat';
+    color: #fff;
+    z-index: 8;
+    scale: 1.5;
+    animation: .8s notificare linear;
+}
+
+#fairplay-djscript-notify > .fairplay-djscript-notify-title {
+    font-size: 1.3em;
+}
+
+#fairplay-djscript-notify > .fairplay-djscript-notify-texts > p {
+    font-weight: 100;
+    opacity: .8;
+    letter-spacing: .08em;
+}
+
+#fairplay-djscript-notify > .fairplay-djscript-notify-texts > button {
+    width: 7vw;
+    margin: 5px;
+    height: 3vh;
+    border: none;
+    background-color: #ffffff30;
+    color: #fff;
+    border-radius: .1em;
+    transition: .5s all;
+    font-weight: bold;
+}
+
+#fairplay-djscript-notify > .fairplay-djscript-notify-texts > button:hover {
+    background-color: #ffffff50;
+    box-shadow: 0 0 0 4px #ffffff30;
+    cursor: pointer;
+}
+
+@keyframes notificare {
+    from {
+        scale: .1;
+    }
+    to {
+        scale: 1.5;
+    }
+}

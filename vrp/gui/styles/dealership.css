@@ -1,0 +1,364 @@
+.dealership-layout {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:radial-gradient(50% 100% at 50% 50%,rgba(22,21,35,0) 0%,rgba(22,21,35,.95) 100%);
+    font-family:"Akrobat";
+    display:none
+    }
+    
+    .dealership-layout > .left-layout {
+    position:absolute;
+    left:13.5%;
+    top:40%;
+    height:100%;
+    width:23%;
+    display:flex;
+    flex-direction:column;
+    gap:1.5%
+    }
+    
+    .dealership-layout > .left-layout > header {
+    margin-top:50%;
+    display:flex;
+    flex-direction:column;
+    height:25%
+    }
+    
+    .dealership-layout > .left-layout > header > .search-bar {
+    height:30%;
+    width:100%;
+    background:#d4d4d420;
+    border-radius:.25vw;
+    border:2px solid #d4d4d405;
+    padding:0 1vh;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    transition:1s;
+    margin-top:5.5%
+    }
+    
+    .dealership-layout > .left-layout > header > .search-bar:hover {
+    background:#ffffff40;
+    border-color:#d4d4d410
+    }
+    
+    .dealership-layout > .left-layout > header > .search-bar > i {
+    margin-left:auto;
+    margin-right:5%;
+    font-size:1.5em
+    }
+    
+    .dealership-layout > .left-layout > header > .search-bar > input {
+    margin-left:5%;
+    background:none;
+    border:none;
+    font-size:1.5em;
+    color:#fff;
+    width:80%
+    }
+    
+    .dealership-layout > .left-layout > header > .search-bar > input:focus {
+    outline:none
+    }
+    
+    .dealership-layout > .left-layout > header > .title {
+    font-size:2em;
+    margin-left:1%;
+    display:flex;
+    flex-direction:column
+    }
+    
+    .dealership-layout > .left-layout > header > .title > h1 {
+    font-family:"Poppins";
+    font-size:1.05em;
+    letter-spacing:.35vh;
+    font-weight:700;
+    text-shadow:0 0 50px #2277fa60
+    }
+    
+    .dealership-layout > .left-layout > header > .title > p {
+    opacity:.5;
+    font-size:.7em
+    }
+    
+    .dealership-layout > .left-layout > header > .title > .close-info {
+    margin-top:5%;
+    display:flex;
+    gap:6%;
+    align-items:center
+    }
+    
+    .dealership-layout > .left-layout > header > .title > .close-info > b {
+    background:rgba(255,255,255,.150);
+    padding:.6vh .5vh;
+    font-size:.5em;
+    border-radius:.5vw;
+    border:2px solid #ffffff60
+    }
+    
+    .dealership-layout > .left-layout > header > .title > .close-info > span {
+    opacity:.5;
+    font-size:.55em;
+    max-width:16.5vw;
+    font-weight:700
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector {
+    height:50%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    gap:2.5%;
+    display:none
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type {
+    background:#d4d4d435;
+    border-radius:.5vw;
+    padding:2.5vh 1.5vh;
+    padding-left:1vw;
+    display:flex;
+    align-items:center
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type .select-category {
+    margin-left:auto;
+    margin-right:2.5%;
+    width:2vw;
+    height:3.5vh;
+    background:linear-gradient(135deg,#ffffff60 -0.24%,#ffffff20 100.24%);
+    border-radius:.25vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:1s
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type .select-category:hover {
+    transform:rotate(45deg);
+    cursor:pointer;
+    box-shadow:0 0 50px #ffffff10
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type .select-category > i {
+    transition:1s
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type .select-category:hover > i {
+    transform:rotate(140deg)
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type > .class-info {
+    display:flex;
+    flex-direction:column;
+    font-family:"Poppins"
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type > .class-info > h1 {
+    font-size:1em;
+    font-weight:700
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector > .type > .class-info > p {
+    font-size:.95em;
+    opacity:.5;
+    font-family:"Akrobat"
+    }
+    
+    .dealership-layout > .vehicle-options {
+    top:85%;
+    padding:1vh;
+    height:15%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:4.5%;
+    font-family:"Akrobat";
+    animation:fade-in 1s
+    }
+    
+    .dealership-layout > .vehicle-options > .test-drive {
+    opacity:.5;
+    font-weight:700;
+    letter-spacing:.15vh;
+    transition:1s
+    }
+    
+    .dealership-layout > .vehicle-options > .test-drive:hover {
+    text-shadow:0 0 10px #fff
+    }
+    
+    .dealership-layout > .vehicle-options > h1 {
+    font-weight:700;
+    font-size:2.4em;
+    text-shadow:0 0 10px #fff
+    }
+    
+    .dealership-layout > .vehicle-options > p {
+    font-family:"Poppins";
+    font-weight:700;
+    font-size:1.25em;
+    color:#81bcfb
+    }
+    
+    .dealership-layout > .vehicle-options > .buy-vehicle {
+    margin-top:2.5%;
+    padding:1.5vh 3.5vw;
+    background:#2277fa80;
+    border-radius:.5vw;
+    font-family:"Akrobat";
+    font-weight:700;
+    font-size:1.15em;
+    transition:1s
+    }
+    
+    .dealership-layout > .right-layout {
+    position:absolute;
+    left:75%;
+    top:21%;
+    height:70%;
+    width:22.5%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:1.5%;
+    transform:perspective(18.75rem) rotateY(-3.5deg);
+    transition:1s;
+    animation:fade-in 1s
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card {
+    width:100%;
+    background:#d4d4d420;
+    box-shadow:0 0 10px #00000010;
+    border:2px solid #ffffff08;
+    border-radius:.25vw;
+    padding:1vh;
+    display:flex;
+    flex-direction:column;
+    gap:3%
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > h1 {
+    margin-top:1.5%;
+    margin-left:1.5%;
+    font-size:1.15em;
+    font-family:"Akrobat";
+    font-weight:700;
+    letter-spacing:.45vh;
+    text-shadow:0 0 20px white,0 0 5px #000
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .progress-layout {
+    width:100%;
+    height:1.65vh;
+    margin-top:3.5%;
+    display:inline-flex;
+    gap:1.5%
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .progress-layout > span {
+    background:#00000035;
+    width:100%;
+    height:90%;
+    border-radius:1vw
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .progress-layout > span.used {
+    background:#80bbfa;
+    box-shadow:0 0 10px #80bbfa
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .color-carousel {
+    width:100%;
+    height:10.65vh;
+    margin-top:3.5%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:8.5% 0;
+    padding:.5vh
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .color-carousel > span {
+    width:75%;
+    border-radius:.25vw;
+    transition:1s
+    }
+    
+    .dealership-layout > .right-layout > .vehicle-stat-card > .color-carousel > span:hover {
+    box-shadow:0 0 20px #00000060;
+    border-radius:50%;
+    cursor:pointer
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector {
+    height:50%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    gap:2.5%
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle {
+    background:#d4d4d425;
+    border-radius:.25vw;
+    height:15%;
+    padding:1.65vh 1.5vw;
+    padding-left:1vw;
+    display:flex;
+    align-items:center;
+    transition:1s
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle:hover:not(.selected) {
+    background:#d4d4d440
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle.selected {
+    background:#80bbfa80
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle > i {
+    margin-left:auto;
+    margin-right:1.5%;
+    font-size:1.5em;
+    opacity:.5;
+    transition:1s
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle > .vehicle-data {
+    display:flex;
+    flex-direction:column;
+    gap:2.5%
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle > .vehicle-data > h1 {
+    font-size:1.25em
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle > .vehicle-data > p {
+    opacity:.5;
+    letter-spacing:.1vh;
+    transition:1s
+    }
+    
+    .dealership-layout > .left-layout > .vehicles-selector > .vehicle > .vehicle-data > p:hover {
+    color:#80bbfa
+    }
+    
+    .dealership-layout > .left-layout > .categories-selector::-webkit-scrollbar,.dealership-layout > .left-layout > .vehicles-selector::-webkit-scrollbar {
+    display:none
+    }
+    
+    .dealership-layout > .vehicle-options > .buy-vehicle:hover,.dealership-layout > .right-layout > .vehicle-stat-card > h1 > i {
+    opacity:.5
+    }

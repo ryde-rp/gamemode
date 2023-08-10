@@ -1,0 +1,382 @@
+.bank-layout {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url("https://cdn.fairplay-rp.ro/recovery/unknown (17).png");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    font-family:"Akrobat";
+    box-shadow:inset 0 0 100vw rgba(0,0,0,.98);
+    display:none
+    }
+    
+    .bank-layout > .bg-blur {
+    width:100%;
+    height:100%
+    }
+    
+    .bank-layout > .bank-statistics {
+    width:65%;
+    height:13.5%;
+    top:20%;
+    display:flex;
+    gap:2.5%
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block {
+    width:20vw;
+    height:12.5vh;
+    display:flex;
+    gap:5%;
+    padding:1vh;
+    padding-left:1.5vw;
+    border-radius:.85vw;
+    background:linear-gradient(90deg,#ffffff30,#d4d4d47a,#ffffff20);
+    box-shadow:0 0 30px rgba(0,0,0,.55);
+    border:2px solid #ffffff30;
+    transform:perspective(18.75rem) rotateY(-2.5deg);
+    transition:1s;
+    align-items:center
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block:hover {
+    background-color:#ffffff60;
+    transform:perspective(18.75rem) rotateY(2.5deg);
+    box-shadow:0 0 40px #ffffff60
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block:nth-child(1) {
+    transform:perspective(18.75rem) rotateY(2.5deg)
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block:nth-child(2) {
+    transform:perspective(18.75rem) rotateY(0.5deg)
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block:nth-child(3) {
+    transform:perspective(18.75rem) rotateY(-2.5deg)
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block > i {
+    margin-left:auto;
+    margin-right:1vw;
+    padding:1.5vh 1.75vh;
+    background:#ffffff20;
+    font-size:2.25em;
+    border-radius:.55vw;
+    box-shadow:0 0 20px rgba(0,0,0,.15)
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block > .data {
+    display:flex;
+    flex-direction:column;
+    gap:10%;
+    height:100%;
+    justify-content:center;
+    text-shadow:0 0 10px #000;
+    transform:perspective(18.75rem) rotateY(-6.5deg)
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block > .data > p {
+    opacity:.5;
+    font-size:1.25em;
+    font-weight:700
+    }
+    
+    .bank-layout > .bank-statistics > .statistic-block > .data > span {
+    font-size:1.2em;
+    font-weight:700;
+    letter-spacing:.15vh;
+    text-shadow:0 0 10px rgba(0,0,0,.55)
+    }
+    
+    .bank-layout > .bank-transactions {
+    width:65%;
+    height:60%;
+    top:60%;
+    overflow:hidden;
+    overflow-y:scroll;
+    padding:0 1.5vh
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.5% 0
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction {
+    width:97%;
+    height:27.5vh;
+    background:#ffffff0f;
+    border:2px solid #ffffff05;
+    backdrop-filter:blur(2.5px);
+    border-radius:.25vw;
+    transition:1s;
+    display:flex;
+    flex-direction:column;
+    gap:2%
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header {
+    width:100%;
+    height:30%;
+    display:flex;
+    align-items:center;
+    gap:8.5%;
+    padding:2vh;
+    border-bottom:2px solid #ffffff10
+    }
+    
+    .bank-layout > .bank-transactions::-webkit-scrollbar-thumb {
+    background-color:#ffffff20
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins {
+    padding:1vh;
+    height:65%;
+    overflow:hidden;
+    overflow-y:scroll;
+    display:flex;
+    flex-direction:column;
+    gap:5%
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins::-webkit-scrollbar-thumb {
+    background-color:#ffffff10
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins > .item {
+    background:#ffffff10;
+    padding:1.65vh;
+    border-radius:.35vw;
+    font-family:"Poppins";
+    display:flex;
+    gap:5%;
+    align-items:center
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins > .item:not(b) {
+    color:rgba(255,255,255,.5)
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins > .item > span > b {
+    color:rgba(255,255,255,.7);
+    font-weight:400
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins > .item > i {
+    margin-left:auto;
+    margin-right:1vw;
+    padding:1vh 1.05vh;
+    background:#ffffff20;
+    border-radius:10vw;
+    transition:1s
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins > .item > i:hover {
+    background:#ffffff40
+    }
+    
+    .bank-layout > .bank-info {
+    top:97%;
+    overflow:hidden;
+    padding:1vh;
+    display:flex;
+    gap:1.5%;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    background:#ffffff05;
+    height:5.5%
+    }
+    
+    .bank-layout > .bank-notification {
+    top:97%;
+    overflow:hidden;
+    width:100%;
+    background:#ffffff05;
+    height:5.5%;
+    display:none
+    }
+    
+    .bank-layout > .bank-notification > .wrapper {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    width:100%;
+    gap:1.5%;
+    padding:1vh
+    }
+    
+    .bank-layout > .bank-notification > .wrapper.ok {
+    background:#1ed76040
+    }
+    
+    .bank-layout > .bank-notification > .wrapper.wrong {
+    background:#c2505040
+    }
+    
+    .bank-layout .bank-transactions .faction-box {
+    width:98.5%;
+    height:35.5vh;
+    background:#ffffff0f;
+    border:2px solid #ffffff05;
+    backdrop-filter:blur(2.5px);
+    border-radius:.25vw;
+    transition:1s;
+    display:flex;
+    flex-direction:column;
+    gap:10%;
+    grid-column:span 2
+    }
+    
+    .bank-layout > .bank-transactions .faction-box > header {
+    width:100%;
+    height:30%;
+    display:flex;
+    align-items:center;
+    gap:3.5%;
+    padding:2vh;
+    border-bottom:2px solid #ffffff10
+    }
+    
+    .bank-layout .bank-transactions .faction-box .faction {
+    display:inline-flex;
+    gap:15px
+    }
+    
+    .bank-layout .bank-transactions .faction-box .faction .faction-action {
+    width:98.5%;
+    height:15.5vh;
+    transition:1s;
+    display:flex;
+    flex-direction:column;
+    gap:2%;
+    grid-column:span 2
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > i,.bank-layout > .bank-transactions .faction-box > header > i {
+    font-size:1.85em;
+    opacity:.5;
+    margin-left:1vw
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > .transaction-title > p:nth-child(1),.bank-layout > .bank-transactions .faction-box > header > .transaction-title > p:nth-child(1) {
+    text-transform:uppercase;
+    letter-spacing:.15vh
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > .transaction-title > p:nth-child(2),.bank-layout > .bank-info > p,.bank-layout > .bank-notification > .wrapper > p,.bank-layout > .bank-transactions .faction-box > header > .transaction-title > p:nth-child(2) {
+    opacity:.5
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > p,.bank-layout > .bank-transactions .faction-box > header > p {
+    margin-left:auto;
+    margin-right:1vw;
+    padding:1.5vh 2vw;
+    background:#2277fa;
+    box-shadow:0 0 10px #2196ff90;
+    border-radius:.25vw;
+    transition:1s
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > p.disabled,.bank-layout > .bank-transactions .faction-box header > p.disabled {
+    background:#c25050;
+    box-shadow:0 0 10px #c2505090
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > header > p:not(.disabled):hover,.bank-layout > .bank-transactions > .faction-box header > p:not(.disabled):hover {
+    background:#2277fa80;
+    box-shadow:none
+    }
+    
+    .bank-layout > .bank-transactions::-webkit-scrollbar-track,.bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins::-webkit-scrollbar-track {
+    background:linear-gradient(to top,transparent,#ffffff05)
+    }
+    
+    .bank-layout > .bank-transactions::-webkit-scrollbar,.bank-layout > .bank-transactions > .transactions-wrapper > .transaction > .list-fpcoins::-webkit-scrollbar {
+    width:.3vw;
+    border-radius:.25vw
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main,.bank-layout .bank-transactions .faction-box .faction .faction-action main {
+    width:100%;
+    height:36%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5.5%;
+    padding:2vh
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input,.bank-layout .bank-transactions .faction-box .faction .faction-action main > input {
+    padding:1.65vh;
+    text-align:center;
+    width:100%;
+    outline:none;
+    border:none;
+    background:#ffffff10;
+    border-radius:.25vw;
+    text-transform:uppercase;
+    font-family:"Akrobat";
+    letter-spacing:.25vh;
+    color:#fff
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input.bigger-size,.bank-layout .bank-transactions .faction-box .faction .faction-action main > input.bigger-size {
+    padding:2.65vh;
+    font-size:1.15em
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input:focus,.bank-layout .bank-transactions .faction-box .faction .faction-action main > input:focus {
+    outline:none
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input::-webkit-outer-spin-button, .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > main > input::placeholder,.bank-layout .bank-transactions .faction-box .faction .faction-action main input::placeholder {
+    color:#fff;
+    opacity:.5
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > footer,.bank-layout .bank-transactions .faction-box .faction .faction-action footer {
+    width:100%;
+    height:30%;
+    display:flex;
+    align-items:center;
+    gap:8.5%;
+    padding:2vh;
+    border-top:2px solid #ffffff05;
+    margin-top:auto
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > footer > .btn,.bank-layout .bank-transactions .faction-box .faction .faction-action footer > .btn {
+    border:2px solid #ffffff10;
+    background:#ffffff05;
+    padding:2vh 11vw;
+    border-radius:10vw;
+    transition:1s
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > footer > .btn:hover,.bank-layout .bank-transactions .faction-box .faction .faction-action footer > .btn:hover {
+    background:#ffffff15
+    }
+    
+    .bank-layout > .bank-transactions > .transactions-wrapper > .transaction > footer > #btn-transfer-bank,.bank-layout .bank-transactions .faction-box .faction .faction-action footer > #btn-transfer-bank {
+    padding:2vh 10.55vw
+    }
+    
+    .bank-layout > .bank-info > i,.bank-layout > .bank-notification > .wrapper > i {
+    opacity:.5;
+    padding:1vh 1.55vh;
+    background:#ffffff10;
+    border-radius:.25vw
+    }

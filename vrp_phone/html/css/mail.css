@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+.mail-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #202731;
+
+    overflow: hidden;
+}
+
+.mail-home {
+    position: relative;
+    left: 0;
+}
+
+
+.mail-header {
+    display: block;
+    height: 14vh;
+    width: 100%;
+    background: #202731;
+}
+
+#mail-header-text {
+    position: absolute;
+    top: 5vh;
+    left: 12.850vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vh;
+    color: white;
+}
+
+#mail-header-mail {
+    position: absolute;
+    top: 7vh;
+    text-align: center;
+    padding: .250vh 1vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3vh;
+    color: white;
+    opacity: .5;
+}
+
+#mail-header-lastsync {
+    position: absolute;
+    top: 10vh;
+    right: 9vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.150vh;
+    color: white;
+    text-align: center;
+    padding: 1vh 1vw;
+    background: #ffffff20;
+    border-radius: .25vw;
+}
+
+#mail-header-deleteall {
+    position: absolute;
+    top: 10vh;
+    right: 3.550vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.150vh;
+    color: white;
+    text-align: center;
+    padding: 1vh .8vw;
+    background: #ffffff20;
+    border-radius: .25vw;
+    transition: 1s;
+}
+
+#mail-header-deleteall:hover{
+  background: #ffffff40;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.mail-list {
+    position: absolute;
+    width: 99%;
+    height: 40vh;
+    top: 15.5vh;
+    left: .1vh;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
+.mail-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mail::-webkit-scrollbar {
+    display: none;
+}
+
+.mail {
+    position: relative;
+    height: 19.5%;
+    left: 5.5%;
+    margin-top: 2px;
+    transition: 1s ease-in-out;
+    background: #ffffff20;
+/*     border-radius: .55vw; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.mail:hover {
+    background-color: #0d1218c0;
+    transition: 1s ease-in-out;
+}
+
+.mail-sender {
+    position: absolute;
+    /* font-family: 'Poppins', sans-serif; */
+    font-size: 1.6vh;
+    color: white;
+    left: 6.5vh;
+    top: 1.550vh;
+    font-family: "Rajdhani";
+
+}
+
+.mail-text {
+    position: absolute;
+    margin-top: 3.750vh;
+    left: 6.5vh;
+    font-size: 1.15vh;
+    color: white;
+    max-width: 18.5vh;
+    font-family: "Rajdhani";
+}
+.mail-text > p {
+    white-space: nowrap;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.mail-time {
+    position: absolute;
+    /* font-family: 'Poppins', sans-serif; */
+    font-size: 1.1vh;
+    color: white;
+    right: 1.250vh;
+    top: 1vh;
+}
+
+.opened-mail {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #202731;
+    overflow: hidden;
+    top: 0;
+    left: -30vh;
+}
+
+.opened-mail-header {
+    display: block;
+    height: 14vh;
+    width: 100%;
+}
+
+.mail-back {
+    position: absolute;
+    top: 5vh;
+    left: 2.350vh;
+    color: white;
+    padding: 1vh;
+    transition: .850s;
+}
+
+.mail-back:hover #mail-back {
+    cursor: pointer;
+    transition: .850s ease-in-out;
+    opacity: .5;
+}
+
+.mail-back-text{
+    color: white;
+    font-family: "Rajdhani";
+    font-size: 1.8vh;
+    
+    position: relative;
+    left: 25px;
+}
+
+.mail-back-text:hover{
+    color: #1194ea;
+    text-decoration: underline;
+    text-decoration-color: #2277fa60;
+/*     text-shadow: 0 0 15px #11e4ea; */
+    cursor: pointer;
+}
+
+.mail-subject {
+    position: absolute;
+    color: white;
+    top: 10vh;
+    left: 2.5vh;
+    font-family: "Rajdhani";
+    font-size: 1.8vh;
+    max-width: 22vh;
+}
+
+.mail-subject > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mail-date {
+    position: absolute;
+    top: 15vh;
+/*     left: 2vh; */
+    right: 3vh;
+    font-family: "Rajdhani";
+    font-weight: 500;
+    /* font-family: 'Poppins', sans-serif; */
+    font-size: 1.5vh;
+    color: white;
+}
+
+.mail-spacing {
+    position: absolute;
+    width: 93%;
+    opacity: 0.5;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(29, 27, 52)), to(rgb(29, 27, 52)), color-stop(0.5, rgba(255, 255, 255, .65)));
+    height: .2vh;
+    top: 17.5vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border-radius: 20vh;
+}
+
+.mail-content {
+    position: absolute;
+    height: calc(100% - 250px);
+    top: 19.3vh;
+    left: 2.5vh;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.6vh;
+    color: white;
+    max-width: 25vh;
+    overflow-y: scroll;
+}
+.mail-content::-webkit-scrollbar {
+    display: none;
+}
+.mail-content > p {
+    white-space: nowrap;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.opened-mail-footer {
+    position: absolute;
+    width: 85%;
+    left: 2vh;
+    height: 4.5vh;
+    bottom: 6.5%;
+}
+
+.opened-mail-footer-item {
+    position: relative;
+    height: 4vh;
+    text-align: center;
+    line-height: 4.3vh;
+    color: white;
+    font-size: 1.8vh;
+    transition: .850s ease-in-out;
+    float: left;
+
+    background: linear-gradient(to bottom, #3c5875, transparent);
+    border-radius: .35vw;
+}
+
+.opened-mail-footer-item:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.opened-mail-footer-item:hover .mail-icon {
+    font-size: 1.9vh;
+    transition: .1s ease-in-out;
+    animation: Shake 1s infinite;
+}
+
+@keyframes Shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.mail-firstletter {
+    position: absolute;
+    height: 4.3vh;
+    width: 4.2vh;
+    margin: .5vh;
+    margin-top: 7.250%;
+    margin-left: .8vh;
+    text-align: center;
+    line-height: 4.650vh;
+    border-radius: .25vw;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}

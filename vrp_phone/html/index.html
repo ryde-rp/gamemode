@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.9/purify.min.js" integrity="sha512-VOTFfd4vxPpuE98m9UQTN7j2N2/Blw44lZMhRTnZQqA2gOHq7Yvn5bdIDjjAZuFqqkDtppcjMW+dN3GYbhM94g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>iRyde 15 Pro Max</title>
+
+	<!-- PreLoad Styles -->
+	<link rel="preload" as="style" href="./css/main.css">
+	<link rel="preload" as="style" href="./css/tooltip.css">
+	<link rel="preload" as="style" href="./css/settings.css">
+	<link rel="preload" as="style" href="./css/phone.css">
+	<link rel="preload" as="style" href="./css/mail.css">
+	<link rel="preload" as="style" href="./css/bank.css">
+	<link rel="preload" as="style" href="./css/whatsapp.css">
+	<link rel="preload" as="style" href="./css/gallery.css">
+	<link rel="preload" as="style" href="./css/camera.css">
+	<link rel="preload" as="style" href="./css/jobs.css">
+    <link rel="preload" as="style" href="./css/calculator.css">
+    <link rel="preload" as="style" href="./css/twitter.css">
+    <link rel="preload" as="style" href="./css/snake.css">
+    <link rel="preload" as="style" href="./css/taxi.css">
+    <link rel="preload" as="style" href="./css/mechanic.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/tooltip.css">
+	<link rel="stylesheet" href="./css/settings.css">
+	<link rel="stylesheet" href="./css/phone.css">
+	<link rel="stylesheet" href="./css/mail.css">
+	<link rel="stylesheet" href="./css/bank.css">
+	<link rel="stylesheet" href="./css/whatsapp.css">
+	<link rel="stylesheet" href="./css/gallery.css">
+	<link rel="stylesheet" href="./css/camera.css">
+	<link rel="stylesheet" href="./css/jobs.css">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="./css/twitter.css">
+    <link rel="stylesheet" href="./css/snake.css">
+    <link rel="stylesheet" href="./css/mechanic.css">
+    <link rel="stylesheet" href="./css/taxi.css">
+
+
+    <script src="https://kit.fontawesome.com/aef25c3e23.js" crossorigin="anonymous"></script>
+	<!-- CDN's -->
+	<script src="js/jquery-3.6.0.min.js"></script> <!-- JQuery -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Bootstrap -->
+	<script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js" integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script> <!-- Color CDN -->
+
+	<script src="https://kit.fontawesome.com/0d5b2bb295.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- Bootstrap -->
+</head>
+	<body style="background-color: transparent !important";>
+		<div id="popup">
+			<div class="popupclass">
+				<div id="close"></div>
+			</div>
+		</div>
+		<div class="container disableSelection">
+			<img src="./img/samsung-s10.png" class="phone-frame">
+			<div class="phone-container phone-background">
+				<!-- Phone Header -->
+				<div class="phone-header">
+					<div id="phone-server">FP Mobile</div>
+					<div id="phone-time">08:05</div>
+					<div id="phone-icons">
+						<i class="fas fa-map-marker-alt" id="phone-gps"></i>
+						<i class="fad fa-signal-4" id="phone-signal" data-toggle="tooltip" data-placement="left" title="FPMb 5G"></i>
+						<i class="fas fa-battery-three-quarters" id="phone-battery"></i>
+					</div>
+				</div>
+
+				<!-- Phone Notification -->
+				<div class="phone-notification-container">
+					<div class="notification-icon"></div>
+					<div class="notification-title"></div>
+					<div class="notification-text"></div>
+				</div>
+
+				<div class="phone-roalert-container" onclick="openRoalert(this);">
+					<div class="notification-icon"><i class="fa-solid fa-bell-on"></i></div>
+					<div class="notification-title"><p>RO Alert</p></div>
+					<div class="notification-text"><p>Click pentru a vedea</p></div>
+					<div class="roalert-text">
+						Acesta este o simulare a sistemului de urgenta RoAlert.
+					</div>
+				</div>
+
+				<div class="use-photo-container">
+					<div id="use-camera"><i class="fa-solid fa-camera"></i></div>
+					<div id="use-gallery"><i class="fa-solid fa-images"></i></div>
+				</div>
+
+				<!-- Home Applications -->
+				<div class="phone-applications">
+					<div class="phone-footer-applications">
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="1"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="2"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="3"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="4"></div>
+					</div>
+
+					<div class="phone-home-applications">
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="5"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="6"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="7"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="8"></div>
+
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="9"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="10"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="11"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="12"></div>
+
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="13"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="14"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="15"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="16"></div>
+
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="17"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="18"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="19"></div>
+						<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="20"></div>
+					</div>
+				</div>
+
+
+				<!-- Unread Alerts -->
+				<!-- <div class="app-unread-alerts">1</div> -->
+
+				<!-- Container for all application's -->
+				<div class="phone-application-container">
+					<div class="settings-app">
+						<div class="settings-app-header"><i class="fas fa-cogs"></i></div>
+
+						<div class="settings-app-tab-appereance">
+							<div class="settings-app-tab-header"><p>Afisaj</p></div>
+							<div class="settings-app-tab" data-settingstab="background">
+								<div class="settings-tab-icon"><i class="fas fa-palette" style="color: #9b59b6;"></i></div>
+								<div class="settings-tab-title"><p>Imagine de fundal</p></div>
+								<div class="settings-tab-description"><p>Prestabilita</p></div>
+							</div>
+						</div>
+
+
+						<div class="settings-app-tab-information">
+							<div class="settings-app-tab secondTab" data-settingstab="myPhone">
+								<div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i></div>
+								<div class="settings-tab-title"><p>Număr Telefon</p></div>
+								<div class="settings-tab-description" id="myPhoneNumber"><p>Necunoscut</p></div>
+							</div>
+							<div class="settings-app-tab secondTab" data-settingstab="serialNumber">
+								<div class="settings-tab-icon"><i class="fas fa-mobile-android" style="color: #e67e22;"></i></div>
+								<div class="settings-tab-title"><p>Model</p></div>
+								<div class="settings-tab-description" id="mySerialNumber"><p>Necunoscut</p></div>
+							</div>
+							<div class="settings-app-tab secondTab" data-settingstab="numberrecognition">
+								<!-- Rounded switch -->
+								<label class="switch">
+									<input class="numberrec-box" type="checkbox">
+									<span class="slider round"></span>
+								</label>
+
+								<div class="settings-tab-icon"><i class="fa-solid fa-user-secret" style="color: #e67e22;"></i></div>
+								<div class="settings-tab-title"><p>Număr Ascuns</p></div>
+								<div class="settings-tab-description" id="numberrecognition"><p>Dezactivat</p></div>
+							</div>
+						</div>
+
+						<div class="settings-background-tab">
+							<div class="settings-app-header"><p>Wallpaper</p></div>
+
+							<div class="background-list">
+
+								<div class="background-item" data-background="default-1" style="background-image: url('img/backgrounds/default-1.png');">
+									<i class="fas fa-check-circle"></i>
+								</div>
+
+								<div class="background-item" data-background="default-2" style="background-image: url('img/backgrounds/default-2.png');"></div>
+								<div class="background-item" data-background="default-3" style="background-image: url('img/backgrounds/default-3.png');"></div>
+								<div class="background-item" data-background="default-4" style="background-image: url('img/backgrounds/default-4.png');"></div>
+								<div class="background-item" data-background="default-5" style="background-image: url('img/backgrounds/default-5.png');"></div>
+								<div class="background-item" data-background="default-6" style="background-image: url('img/backgrounds/default-6.png');"></div>
+								<div class="background-item" data-background="default-7" style="background-image: url('img/backgrounds/default-7.png');"></div>
+								<div class="background-item background-custom-item" data-background="custom-background">
+									<center style='color: #888; font-size: 1.5vh;'><i class="fa-solid fa-images"></i><br/>Custom</center>
+								</div>
+
+							</div>
+
+							<div class="background-buttons">
+								<div class="background-button" id="accept-background">
+									<p>Confirma</p>
+								</div>
+								<div class="background-button" id="cancel-background">
+									<p>Anuleaza</p>
+								</div>
+							</div>
+
+							<div class="background-custom">
+								<div class="background-custom-title">Imagine personalizata</div>
+								<input type="text" class="custom-background-input" placeholder="URL (.jpg/.png)" spellcheck="false">
+
+								<div class="background-custom-buttons">
+									<div class="custom-background-button" id="accept-custom-background"><p>Salveaza</p></div>
+									<div class="custom-background-button" id="cancel-custom-background"><p>Anuleaza</p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="phone-call-app">
+						<div class="phone-call-incoming">
+							<div class="phone-call-incoming-title">Incoming Call</div>
+							<div class="phone-call-incoming-caller">Unknown Number</div>
+							<div class="phone-call-incoming-picture"></div>
+
+							<i class="fas fa-phone" id="incoming-answer"></i>
+							<i class="fas fa-phone-slash" id="incoming-deny"></i>
+						</div>
+
+						<div class="phone-call-outgoing">
+							<div class="phone-call-outgoing-title">Calling...</div>
+							<div class="phone-call-outgoing-caller">Unknown Number</div>
+							<div class="phone-call-outgoing-picture"></div>
+
+							<i class="fas fa-phone" id="outgoing-cancel"></i>
+						</div>
+
+						<div class="phone-call-ongoing">
+							<div class="phone-call-ongoing-title">Ongoing</div>
+							<div class="phone-call-ongoing-caller">Unknown Number</div>
+							<div class="phone-call-ongoing-picture"></div>
+							<div class="phone-call-ongoing-time">05:05</div>
+
+							<i class="fas fa-phone" id="ongoing-cancel"></i>
+						</div>
+					</div>
+
+					<div class="phone-app">
+						<div class="phone-app-header">
+							<p>Contacte</p>
+							<span id="total-contacts">0 contacte</span>
+						</div>
+
+						<div class="phone-contacts">
+							<div class="phone-contacts-header">
+								<input type="text" id="contact-search" placeholder="Cauta dupa nume..." spellcheck="false">
+								<i id="phone-search-icon" class="fas fa-search"></i>
+								<i id="phone-plus-icon" class="fas fa-plus"></i>
+								<i id="phone-blocked-icon" class="fa-solid fa-user-lock"></i>
+							</div>
+
+							<div class="phone-contact-list">
+							</div>
+						</div>
+
+						<div class="phone-recent">
+							<div class="phone-recent-header"><p>Istoric apeluri</p></div>
+
+							<div class="phone-recent-calls">
+								<!-- <div class="phone-recent-call"> <div class="phone-recent-call-image">P</div> <div class="phone-recent-call-name">Pieter Post</div> <div class="phone-recent-call-type"><i class="fas fa-phone-slash"></i></div> <div class="phone-recent-call-time">12:05</div> </div> -->
+							</div>
+						</div>
+
+						<div class="phone-servicii">
+							<div class="phone-servicii-header">
+								Servicii
+							</div>
+
+							<div class="service-contacts">
+
+								<div class="service-contact" data-service='Politie'>
+									<i class="fas fa-handcuffs"></i>
+									<span class="service-name">Poliție</span> 
+								</div>
+
+								<div class="service-contact" data-service='Smurd'>
+									<i class="fas fa-heartbeat"></i>
+									<span class="service-name">Smurd</span> 
+								</div>
+<!-- 
+								<div class="service-contact" data-service='Taxi'>
+									<i class="fas fa-taxi"></i>
+									<span class="service-name">Taxi</span> 
+								</div>
+
+								<div class="service-contact" data-service='Mecanic'>
+									<i class="fas fa-wrench"></i>
+									<span class="service-name">Mecanic</span> 
+								</div> -->
+
+							</div>
+						</div>
+
+						<div class="phone-keypad noselect">
+							<div id="phone-keypad-add"><i class="fa-solid fa-user-plus"></i> Adauga Contact</div>
+							<div id="phone-keypad-input"></div>
+
+							<div class="phone-keypad-keys">
+								<div class="phone-keypad-key" data-keypadvalue="1">1</div>
+								<div class="phone-keypad-key" data-keypadvalue="2">2</div>
+								<div class="phone-keypad-key" data-keypadvalue="3">3</div>
+								<div class="phone-keypad-key" data-keypadvalue="4">4</div>
+								<div class="phone-keypad-key" data-keypadvalue="5">5</div>
+								<div class="phone-keypad-key" data-keypadvalue="6">6</div>
+								<div class="phone-keypad-key" data-keypadvalue="7">7</div>
+								<div class="phone-keypad-key" data-keypadvalue="8">8</div>
+								<div class="phone-keypad-key" data-keypadvalue="9">9</div>
+								<div class="phone-keypad-key" data-keypadvalue="*"><i class="fas fa-backspace"></i></div>
+								<div class="phone-keypad-key" data-keypadvalue="0">0</div>
+								<div class="phone-keypad-key" data-keypadvalue="-">-</div>
+							</div>
+							<div class="phone-keypad-key-call"><i class="fas fa-phone-alt"></i></div>
+						</div>
+
+						<div class="phone-add-contact">
+							<div class="phone-add-contact-header"><p>Adaugă Contact</p></div>
+
+							<i id="phone-add-contact-name-icon" class="fas fa-user"></i>
+							<input type="text" class="phone-add-contact-name" placeholder="Numele contactului" required spellcheck="false">
+
+							<i id="phone-add-contact-number-icon" class="fas fa-phone-alt"></i>
+							<input type="text" class="phone-add-contact-number" id="add-contact-number" placeholder="Număr de telefon" required spellcheck="false">
+
+							<div class="phone-add-contact-buttons">
+								<div class="phone-add-contact-button" id="add-contact-save"><p>Salveaza</p></div>
+								<div class="phone-add-contact-button" id="add-contact-cancel"><p>Anuleaza</p></div>
+							</div>
+						</div>
+
+						<div class="phone-blocked-contact">
+							<div class="phone-add-contact-header"><p>Numere blocate</p></div>
+
+							<i id="phone-add-contact-number-icon" class="fas fa-phone-alt"></i>
+							<input type="text" class="phone-add-contact-number" id="blocked-contact-number" placeholder="Număr de telefon" required spellcheck="false">
+
+							<div class="phone-blocked-contact-buttons">
+								<div class="phone-add-contact-button" id="blocked-contact-save"><p><i class="fa-solid fa-plus"></i></p></div>
+								<div class="phone-add-contact-button" id="blocked-contact-cancel"><p><i class="fas fa-rotate-left"></i> &nbsp; Înapoi</p></div>
+							</div>
+
+							<div id="phone-blocked-list">
+								<!-- <div>01234567890<i class="fa-solid fa-ban"></i></div> -->
+							</div>
+
+						</div>
+
+						<div class="phone-edit-contact">
+							<div class="phone-edit-contact-header"><p>Add Contact</p></div>
+
+							<i id="phone-edit-contact-name-icon" class="fas fa-user"></i>
+							<input type="text" class="phone-edit-contact-name" placeholder="Contact Name" required spellcheck="false">
+
+							<i id="phone-edit-contact-number-icon" class="fas fa-phone-alt"></i>
+							<input type="text" class="phone-edit-contact-number" placeholder="Phone number" required spellcheck="false">
+
+							<div class="phone-edit-contact-buttons">
+								<div class="phone-edit-contact-button" id="edit-contact-save"><p>Save</p></div>
+								<div class="phone-edit-contact-button" id="edit-contact-delete"><p>Delete</p></div>
+								<div class="phone-edit-contact-button" id="edit-contact-cancel"><p>Cancel</p></div>
+							</div>
+						</div>
+
+						<div class="phone-app-footer">
+							<div class="phone-app-footer-button" data-phonefootertab="servicii">
+								<i class="fas fa-bookmark"></i>
+							</div>
+							<div class="phone-app-footer-button" data-phonefootertab="keypad">
+								<i class="fas fa-list-ol"></i>
+							</div>
+							<div class="phone-app-footer-button" data-phonefootertab="recent">
+								<i class="fas fa-clock"></i>
+							</div>
+							<div class="phone-app-footer-button phone-selected-footer-tab" data-phonefootertab="contacts">
+								<i class="fas fa-address-book"></i>
+							</div>
+						</div>
+					</div>
+
+                <div class="mail-app">
+                    <div class="mail-home">
+                        <div class="mail-header">
+                            <span id="mail-header-text">Inbox</span>
+                            <span id="mail-header-mail">re@valigumo.com</span>
+                            <span id="mail-header-lastsync">Ultima sincronizare 18:31</span>
+                            <span id="mail-header-deleteall"><i class="fas fa-trash"></i></span>
+                        </div>
+
+                        <div class="mail-list"></div>
+                    </div>
+
+                    <div class="opened-mail">
+                        <div class="opened-mail-header">
+                            <div class="mail-back"><i class="fas fa-chevron-left" id="mail-back"></i></div>
+                            <div class="mail-subject">
+                                <p>Subiect</p>
+                            </div>
+                            <div class="mail-date">
+                                <p>02 Ianuarie 2022 &nbsp; 21:21</p>
+                            </div>
+                            <div class="mail-spacing"></div>
+                            <div class="mail-content">
+                                <p>
+                                    Sal mane mersi ca citesti !
+                                </p>
+                            </div>
+                        </div>
+                        <div class="opened-mail-footer">
+                            <div class="opened-mail-footer-item">
+                                <i class="fas fa-check-circle" id="accept-mail"></i>
+                            </div>
+                            <div class="opened-mail-footer-item">
+                                <i class="fas fa-trash-alt" id="remove-mail"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+					<div class="gallery-app">
+						<div class="gallery-app-header">
+							<i class="fas fa-images"></i>&nbsp; Fotografii
+							<span id="gallery-take-photo" style="right: 3.5vh;"><i class="fas fa-camera"></i></span>
+							<span id="gallery-back" style="left: 3.250vh; display: none;"><i class="fas fa-angle-left"></i></span>
+							<span id="gallery-delete" style="right: 6.5vh; display: none;"><i class="fa-regular fa-trash-can"></i></span>
+						</div>
+						<div class="gallery-homescreen">
+							<div class="gallery-images"></div>
+						</div>
+						<div class="gallery-detailscreen">
+							<div class="gallery-details">
+								<div class="imagedata"><img class="image" id="imagedata" style="width: 100%;" src="" alt=""></div>
+							</div>
+							<span id="gallery-date"><i class="fas fa-calendar-days"></i> &nbsp; 15.02.2022 05:37</span>
+						</div>
+					</div>
+
+					<div class="camera-app">
+						<div class="camera-homescreen">
+							<div class="camera-image">
+								<div class="loader"></div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="jobs-app">
+
+						<div class="bg">
+							<i class="fas fa-folder-open"></i>
+						</div>
+						
+						<div class="content">
+							<i class="fas fa-business-time"></i>
+							<div class="jobs-list">
+								<!--
+								<div>
+									<p>Sofer de Autobuz <span>(25h)</span></p>
+									<div class="job-btns">
+										<i class="fas fa-briefcase"></i>
+										<i class="fas fa-map-location-dot"></i>
+									</div>
+								</div>
+								-->
+							</div>
+						</div>
+
+
+					</div>
+
+                 <div class="twitter-app">
+
+                        <div class="twitter-home-tab">
+                            <center style='color: #888; font-size: 2vh; margin-top: 8vh;'><i class='fas fa-frown'></i><br/>Nu sunt tweet-uri postate.</center>
+                        </div>
+
+                        <div class="twitter-self-tab">
+							<center style='color: #888; font-size: 2vh; margin-top: 8vh;'><i class='fas fa-frown'></i><br/>Nu ai postat nici un tweet.</center>
+                        </div>
+                        <div class="twitter-new-tweet">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+
+                        <div class="twitter-new-tweet-tab">
+                            <div class="twitter-new-tweet-header"><p><i class="fab fa-twitter"></i> &nbsp; Posteaza un Tweet</p></div>
+
+                            <textarea id="tweet-new-message" placeholder="Mesaj" cols="30" rows="10" spellcheck="false" required></textarea>
+                            <textarea id="tweet-new-url" placeholder="URL Imagine" cols="30" rows="10" spellcheck="false"></textarea>
+
+                            <div class="twitter-new-tweet-buttons">
+                                <div class="twitter-new-tweet-button" id="send-tweet"><p><i class="far fa-square-check"></i></p></div>
+                                <div class="twitter-new-tweet-button send-photo" id="send-photo"><p><i class="fas fa-image"></i></p></div>
+                                <div class="twitter-new-tweet-button" id="cancel-tweet"><p><i class="fas fa-rotate-left"></i> &nbsp; Înapoi</p></div>
+                            </div>
+                        </div>
+                        
+                        <div class="twitter-header">
+                            <div id="twitter-home" data-twittertab="twitter-home" class="twitter-header-tab selected-twitter-header-tab"><i class="fas fa-home"></i></div>
+                            <div id="twitter-self" data-twittertab="twitter-self" class="twitter-header-tab"><i class="fas fa-user"></i></div>
+                        </div>
+                    </div>
+
+					<div class="bank-app">
+						<div class="bank-header">
+							<h1>FP Bank</h1>
+						</div>
+
+						<div class="bank-balance-wrapper">
+							<h3 >BALANȚĂ</h3>
+							<h1 id="bank-balance">0<span> USD</span></h1>
+						</div>
+
+						<div class="bank-hr"></div>
+
+						<div class="bank-transfer-wrapper">
+							<h3><i data-toggle="tooltip" data-placement="top" title="Comisionul pentru o tranzactie este de 5%" class="fa-solid fa-messages-dollar"></i></h3>
+
+							<div id="bank-transfer-grid">
+
+								<div class="bank-contact" data-row='1' data-bank-number="new">
+									<div class="bank-contact-side">
+										<div class="bank-add-icon"><i class="fa-solid fa-plus"></i></div>
+										<span>Transferă</span>
+									</div>
+									<div class="bank-contact-side" style="display: none;">
+										<input type="text" name="to" placeholder="Telefon" />
+										<input type="number" name="amount" placeholder="Sumă" />
+										<div class="bank-btn"><i class="fa-solid fa-paper-plane"></i> Trimite</div>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="taxi-app">
+						<div class="wrapper">
+							<div class="call-box">
+								<img src="https://cdn.fairplay-rp.ro/recovery/taxi-fly-five.png">
+								<div class="instructions">
+									<i class="fa-regular fa-comments"></i>
+
+									<div class="texts">
+										<p>ADAUGA NOTITE</p>
+										<p>PENTRU SOFER</p>
+									</div>
+								</div>
+
+								<input id="taxiCall-notes">
+
+								<div class="texts" id="callTaxi">
+									<p>CLICK PENTRU A SUNA</p>
+									<p>UN SOFER DE TAXI</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mechanic-app">
+						<div class="wrapper">
+							<div class="call-box">
+								<img src="https://cdn.pixabay.com/photo/2012/04/16/12/18/wrench-35745__340.png" width="71" height="35">
+								<div class="instructions">
+									<i class="fa-regular fa-comments"></i>
+
+									<div class="texts">
+										<p>TI S-A STRICAT</p>
+										<p>MASINA PE DRUM?</p>
+									</div>
+								</div>
+
+								<div class="texts" id="callMechanic">
+									<p>NICIO PROBLEMA!</p>
+									<p>CLICK PENTRU A SUNA</p>
+									<p>UN MECANIC</p>
+								</div>
+
+								<!-- <div class="texts">
+									<p>soon...</p>
+								</div> -->
+							</div>
+						</div>
+					</div>
+
+					<div class="snake-app">
+	                    <iframe width="100%" height="654" src="https://snake.googlemaps.com/"></iframe>
+	                </div>
+
+                    <div class="calculator-app">
+                        <div class="calculator-header">
+                            <p>Calculator</p>
+                        </div>
+
+                        <div class="calculator-list">
+                            <form name="calc" class="calc">
+                                <input id="monitorcalc" type="text" value="" disabled name="display">
+                                <input id="shakhescalc" type="button" value="AC" onclick="ac()">
+                                <input id="shakhescalc" type="button" value="C" onclick="c()">
+                                <input id="shakhescalc" type="button" value="%" onclick="data(this.value)">
+                                <input id="minishalhcalc" type="button" value="-" onclick="data(this.value)">
+                                <input id="" type="button" value="1" onclick="data(this.value)">
+                                <input id="" type="button" value="2" onclick="data(this.value)">
+                                <input id="" type="button" value="3" onclick="data(this.value)">
+                                <input id="minishalhcalc" type="button" value="*" onclick="data(this.value)">
+                                <input id="" type="button" value="4" onclick="data(this.value)">
+                                <input id="" type="button" value="5" onclick="data(this.value)">
+                                <input id="" type="button" value="6" onclick="data(this.value)">
+                                <input id="minishalhcalc" type="button" value="/" onclick="data(this.value)">
+                                <input id="" type="button" value="7" onclick="data(this.value)">
+                                <input id="" type="button" value="8" onclick="data(this.value)">
+                                <input id="" type="button" value="9" onclick="data(this.value)">
+                                <input id="minishalhcalc" type="button" value="+" onclick="data(this.value)">
+                                <input id="" type="button" value="." onclick="data(this.value)">
+                                <input id="" type="button" value="0" onclick="data(this.value)">
+                                <input id="" type="button" value="=" onclick="equal()">
+                                <div style="clear: both;"></div>
+                            </form>
+                        </div>
+                    </div>
+
+					<div class="whatsapp-app">
+						<div class="whatsapp-header">
+							<div class="whatsapp-header-top"></div>
+							<div class="whatsapp-header-footer">
+								<p>Whatsapp</p>
+								<i id="whatsapp-search-chats" class="fas fa-search"></i>
+								<input type="text" id="whatsapp-search-input" placeholder="Nume contact..." spellcheck="false">
+							</div>
+						</div>
+						<div class="whatsapp-chats">
+<!-- 
+							<div class="whatsapp-chat" id="whatsapp-chat-0770123456">
+								<div class="whatsapp-chat-picture" style="background-image: url('./img/default.png');"></div>
+								<div class="whatsapp-chat-name"><p> Name </p></div>
+								<div class="whatsapp-chat-lastmessage"><p> Last Message </p></div>
+								<div class="whatsapp-chat-lastmessagetime"><p> 13:37 </p></div>
+								<div class="whatsapp-chat-unreadmessages unread-chat-id-0770123456">5</div>
+							</div> -->
+
+
+						</div>
+						<div class="whatsapp-openedchat">
+							<div class="whatsapp-header-openedchat">
+								<div class="whatsapp-header-top-openedchat"></div>
+								<div class="whatsapp-header-footer-openedchat">
+									<div class="whatsapp-openedchat-picture"></div>
+									<div class="whatsapp-openedchat-name"><p></p></div>
+									<i id="whatsapp-openedchat-back" class="fas fa-arrow-left"></i>
+									<i id="whatsapp-openedchat-call" class="fas fa-phone"></i>
+								</div>
+							</div>
+							<div class="whatsapp-openedchat-messages">
+								<div id="whatsapp-openedchat-loadmsg">Incarca mai multe...</div>
+							</div>
+							<div class="whatsapp-openedchat-input">
+								<div class="whatsapp-extra-buttons">
+									<div class="whatsapp-extra-button" id="send-location"><i class="fas fa-map-marker-alt"></i></div>
+									<div class="whatsapp-extra-button" id="send-image"><i class="fas fa-camera"></i></div>
+									<!-- <div class="whatsapp-extra-button" id="send-money"><i class="fas fa-money-bill"></i></div> -->
+								</div>
+								<input type="text" id="whatsapp-openedchat-message" placeholder="Scrie un mesaj.." spellcheck="false">
+								<i class="fas fa-paper-plane" id="whatsapp-openedchat-send"></i>
+								<i class="fas fa-ellipsis-v" id="whatsapp-openedchat-message-extras"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="phone-currentcall-container">
+					<div class="phone-currentcall-icon"><i class="fas fa-phone"></i></div>
+					<div class="phone-currentcall-title">Outgoing call</div>
+					<div class="phone-currentcall-contact">with 0612345678</div>
+				</div>
+
+				<!-- Phone Home Button -->
+				<div class="phone-footer">
+					<div class="phone-home-container">
+						<div class="phone-home-button"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="screen-notifications-container">
+			<div class="screen-notification-icon"><i class="fab fa-twitter"></i></div>
+			<div class="screen-notification-title"><p>New Tweet!</p></div>
+			<div class="screen-notification-content"><p>This is a test notification </p></div>
+		</div>
+
+		<div class="call-notifications">
+			<div class="call-notifications-icon"><i class="fas fa-phone"></i></div>
+			<div class="call-notifications-title"><p>Incoming Call</p></div>
+			<div class="call-notifications-content"><p>You have an incoming call from Test</p></div>
+		</div>
+
+		<!-- JavaScript File's -->
+		<script src="./js/config.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/settings.js"></script>
+		<script src="./js/phone.js"></script>
+		<script src="./js/mail.js"></script>
+		<script src="./js/bank.js"></script>
+		<script src="./js/whatsapp.js"></script>
+		<script src="./js/gallery.js"></script>
+		<script src="./js/camera.js"></script>
+		<script src="./js/twitter.js"></script>
+		<script src="./js/jobs.js" defer></script>
+		<script src="./js/mechanic.js" defer></script>
+		<script src="./js/taxi.js" defer></script>
+        <script src="./js/calculator.js"></script>
+	</body>
+</html>

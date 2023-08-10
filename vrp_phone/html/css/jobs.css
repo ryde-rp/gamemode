@@ -1,0 +1,142 @@
+
+.jobs-app {
+	display: none;
+	height: 100%;
+	width: 100%;
+	color: #fafafa;
+	background-image: url("../img/apps/jobs-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+
+	text-align: center;
+}
+
+.jobs-app > .bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.jobs-app > .content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	top: 0vh;
+	transition: top 500ms 200ms ease-in;
+}
+
+.jobs-app > .bg > i {
+	font-size: 38vh;
+	opacity: .2;
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff77), to(#afafaf99));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	margin-top: 2vhvh;
+	margin-left: 3vh;
+}
+
+.jobs-app > .content > i {
+	color: #fafafa;
+	font-size: 6vh;
+	margin-top: 10vh;
+
+	text-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+	transition: color 200ms ease-out, transform 200ms ease-out;
+}
+
+.jobs-app > .content > .jobs-list::-webkit-scrollbar {
+	display: none;
+}
+
+.jobs-app > .content > .jobs-list {
+	margin: 0 auto;
+	margin-top: 2vh;
+	padding: 1vh;
+	width: 27vh;
+	height: 36.9vh;
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 1vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+
+	transition: visibility 1000ms linear;
+}
+
+.jobs-app > .content > .jobs-list > div {
+	scroll-snap-align: start;
+	font-size: 1.150em;
+
+	line-height: 2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	
+	height: 5vh;
+	width: 100%;
+	padding: 1.5vh 1vh 0 1vh;
+	
+	background: #00000060;
+	border: 2px solid #ffffff10;
+	border-radius: .55vw;
+	transition: 1s;
+}
+
+.jobs-app > .content > .jobs-list > div > p{
+	transition: 1s;
+	font-weight: 800;
+}
+
+.jobs-app > .content > .jobs-list > div > .job-btns{
+	transition: 1s;
+	animation: fade-in 2s;
+	align-self: flex-start;
+	display: inline-flex;
+	gap: 1.5vw;
+	text-align: center;
+	font-size: 1.250em;
+}
+
+.jobs-app > .content > .jobs-list > div > .job-btns > i{
+	transition: 1s;
+}
+
+.jobs-app > .content > .jobs-list > div > .job-btns > i:hover{
+	color: #81bcfb;
+}
+
+.jobs-app > .content > .jobs-list > div:not(:hover) > .job-btns{
+	display: none;
+}
+
+.jobs-app > .content > .jobs-list > div:hover {
+	transform: scale(0.95);
+	background: #ffffff20;
+	border: 2px solid #ffffff10;
+	color: white;
+}
+
+.jobs-app > .content > .jobs-list > div:hover > p{
+	display: none;
+}
+
+.jobs-app > .content > .jobs-list > div > p > span{
+	opacity: .5;
+	font-size: .850em;
+}
+
+@keyframes fade-in{
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}

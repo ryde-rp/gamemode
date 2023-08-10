@@ -1,0 +1,82 @@
+.testdrive-timer {
+  width:100%;
+  height:20%;
+  top:12.5%;
+  color:#81bcfb;
+  font-family:"Akrobat";
+  display:none
+  }
+  
+  .testdrive-timer > .wrapper {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:2.25vw
+  }
+  
+  .testdrive-timer > .wrapper > .line {
+  background:#81bcfb;
+  height:65%;
+  width:.2%;
+  border-radius:.25vw
+  }
+  
+  .testdrive-timer > .wrapper > .timer-block {
+  height:65%;
+  display:flex;
+  flex-direction:column;
+  gap:.65vh;
+  text-align:right;
+  justify-content:center
+  }
+  
+  .testdrive-timer > .wrapper > .timer-block > p {
+  font-size:3.5vh;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:right
+  }
+  
+  .testdrive-timer > .wrapper > .timer-block > p > i {
+  font-size:.8em
+  }
+  
+  .testdrive-timer > .wrapper > .timer-block > span {
+  font-weight:600;
+  color:#ffffff85;
+  letter-spacing:.15vh
+  }
+  
+  .testdrive-timer > .wrapper > i {
+  font-size:6.3821313240043vh
+  }
+  
+  .testdrive-timer > .wrapper > .data-block {
+  height:65%;
+  display:flex;
+  flex-direction:column;
+  gap:1.5vh;
+  text-align:left;
+  justify-content:center
+  }
+  
+  .testdrive-timer > .wrapper > .data-block > strong {
+  font-size:2vh;
+  letter-spacing:.125vh
+  }
+  
+  .testdrive-timer > .wrapper > .data-block > h1 {
+  color:#fff;
+  letter-spacing:.25vh;
+  font-size:2.65vh
+  }
+  
+  .testdrive-timer > .wrapper > .data-block > p {
+  color:#ffffff85;
+  font-weight:700;
+  font-size:1.65vh;
+  letter-spacing:.05vh
+  }

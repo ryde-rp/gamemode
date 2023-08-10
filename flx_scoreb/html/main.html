@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="main" class="main">
+      <div class="arenaspawn">
+        <img src="https://media.discordapp.net/attachments/1048521138126475335/1085782857353539654/New_Project_7.png?width=541&height=541">
+    </div>
+      <div class="keybindContainer">
+        <span class="keyboardKeybindsTitle noSelect"><i class="fa-solid fa-keyboard"></i> Keyboard Keybinds</span>
+        <div class="keyboardKeybinds noSelect" id="keyboardKeybinds"></div>
+      </div>
+      <div class="playerInfoContainer">
+        <span class="playerInfoTitle noSelect"><i class="fa-solid fa-user-gear"></i> Online Entity</span>
+        <div class="playerInfo noSelect">
+          <span class="playerInfoEntry" >JUCATORI <i class="onlinepersons" id="onlinePlayers">0</i></span>
+          <br>
+          <span class="playerInfoEntry" >STAFF <i class="onlinepersons" id="onlineStaff">0</i></span>
+          <br>
+          <span class="playerInfoEntry" >POLITISTI <i class="onlinepersons" id="onlinePolice">0</i></span>
+          <br>
+          <span class="playerInfoEntry" >MEDICI <i class="onlinepersons" id="onlineEMS">0</i></span>
+          <br>
+          <span class="playerInfoEntry" >MECANICI <i class="onlinepersons" id="onlineMechanics">0</i></span>
+          <br>
+          <span class="playerInfoEntry" >TAXI <i class="onlinepersons" id="onlineTaxi">0</i></span>
+        </div>
+      </div>
+      <div id="tableBase" class="tableBase">
+        <table class="tableHeader">
+          <tr>
+            <th onclick="sortTableNumbers(0)" id="th1" class=" arataBord">ID</th>
+            <th onclick="sortTableLetters(1)" id="th2" class=" arataBord">NUME/PRENUME</th>
+            <th onclick="sortTableLetters(2)" id="th3" class=" arataBord">LOC DE MUNCA</th>
+            <th onclick="sortTableLetters(3)" id="th4" class=" arataBord">FACTIUNE</th>
+          </tr>
+        </table>
+        <div id="tableContainer" class="tableContainer">
+          <table id="usersTable">
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
