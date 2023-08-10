@@ -832,7 +832,7 @@ AddEventHandler('_chat:messageEntered', function(author, color, message)
                     chatColor = "7",
                     chatPrefix = "[Cetățean]",
                 }
-                if user_id == 2 then
+                if user_id == 1 then
                     colorData.chatColor = "z"
                     colorData.chatPrefix = "^7[👑]^z [Owner] "
                     colorData.messageColor = "z"
