@@ -246,62 +246,69 @@
         </div>
     </div>
 
-    <div class="survival-wrapper">
+                                     <div class="status-hud">
+                                
+                                        <div class="info-wrapper">
+                                          <div class="kills-container">
+                                              <div class="kills">
+                                                <i class="fa-solid fa-location-arrow"></i>
+                                              </div>
+                                              <div class="kills-text">
+                                                <h1>Strada: {{street}}</h1>
+                                                <p>Zona: {{zone}}</p>
+                                              </div>
+                                          </div>
 
-        <div class="survival-texts" style="display:none;">
-            <div class="vreme">
-                <a id="grade">25 °C</a>
-                <span id="iconvreme"><i class="fa-solid fa-cloud"></i></span>
-                <a id="tipvreme">Sunny</a>
-            </div>
-
-            <div class="zone">
-                <a>Zonă</a><br><a id="zone" style="color: rgba(255, 255, 255, 0.671)">Burton</a>
-            </div>
-
-            <div class="street">
-                <a>Stradă</a><br><a id="street" style="color: rgba(255, 255, 255, 0.671)">Cancer Way</a>
-            </div>
-        </div>
-
-        <div class="survivalcontainer-wrapper">
-            <div class="survivalcontainer">
-
-                <!-- Microphone Hud -->
-                <div class="progress1">
-                    <i id="microfon" style="opacity: .5;" class="fas fa-microphone fa-lg"></i>
-                </div>
-                <!-- Health Hud -->
-                <div class="progress2">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <!-- Armour Hud -->
-                <div class="progress3">
-                    <i class="fas fa-vest"></i>
-                </div>
-                <!-- Hunger Hud -->
-                <div class="progress4">
-                    <i class="fa-solid fa-utensils"></i>
-                </div>
-                <!-- Thirst Hud -->
-                <div class="progress5">
-                    <i class="fa-solid fa-bottle-water"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
+                                          <div class="kills-container">
+                                            <div class="kills">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                            <div class="kills-text">
+                                              <h1>Numele: {{name}}</h1>
+                                              <p>Factiunea: {{faction}}</p>
+                                            </div>
+                                          </div>
+                                          
+                                        </div>
+                                        <div class="dependencies-wrapper">
+                                            <div class="dependency-item" data-tooltip="Voice">
+                                                <div class="dependency-item-fill voice" :style="{'height': uMicrophone + '%'}">
+                                                <i class = "fa-solid fa-microphone"></i>
+                                                </div>
+                                            </div>
+                                            <div class="dependency-item" data-tooltip="Viata">
+                                                <div class="dependency-item-fill viata" :style="{'height': uHealth + '%', 'background': uHealth <= 20 ? '#c72d4040' : '#0eb936b0'}">
+                                                    <i class="fas fa-heart-pulse"></i>
+                                                </div>
+                                            </div>
+                                                <div class="dependency-item" data-tooltip="Armura">
+                                                    <div class="dependency-item-fill armura" :style="{'height': uArmour + '%'}">
+                                                        <i class="fas fa-shield-halved"></i>
+                                                    </div>
+                                                </div>
+                                                        <div class="dependency-item" data-tooltip="Thirst">
+                                                            <div class="dependency-item-fill thirst" :style="{'height': uThirstData + '%'}">
+                                                                <i class="fas fa-tint"></i>
+                                                            </div>
+                                                            </div>
+                                                            <div class="dependency-item" data-tooltip="Hunger">
+                                                                <div class="dependency-item-fill hunger" :style="{'height': uHungerData + '%'}">
+                                                                    <i class="fas fa-hamburger"></i>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                 
+                                
     <!-- 
          -- ==================== --
          --       MAP BORDER     --
          -- ==================== --
                                     -->
 
-    <div class="map-border">
-        <div class="square"></div>
-    </div>
-
-    <!-- 
+                                    <div class="map-border">
+                                        <div class="square"></div>
+                                    </div>
          -- ==================== --
          --       SPEEDOMETER    --
          -- ==================== --
